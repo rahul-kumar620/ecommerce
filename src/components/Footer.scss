@@ -1,0 +1,222 @@
+.main_footer {
+  display: flex;
+  gap: 190px;
+  background-color: rgb(251, 244, 244);
+  padding-bottom: 50px;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  & .sub_footer {
+    display: flex;
+    flex-direction: column;
+    // gap: 15px;
+    & .footer_image {
+      width: 100px;
+      height: auto;
+    }
+    & .heading_text_footer {
+      padding: 2px;
+      & .main_heading_footer {
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(136, 135, 135);
+      }
+    }
+    & .address_icon_main_section {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      & .footer_icon {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        font-size: 25px;
+        padding-top: 10px;
+      }
+      & .address_footer {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-size: 16px;
+        color: gray;
+      }
+    }
+  }
+  & .footer_combind_two_section {
+    display: flex;
+    gap: 250px;
+    & .footer_shop_section {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      & .footer_shop {
+        font-size: 16px;
+        font-weight: 700;
+      }
+      & .footer_sub_item_section {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        & .footer_item_all_text {
+          font-size: 15px;
+          font-weight: 500;
+          color: rgb(165, 164, 164);
+        }
+      }
+    }
+  }
+}
+
+// medium device
+
+@media (max-width: 1026px) {
+  .main_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    background-color: rgb(244, 242, 242);
+    padding-bottom: 70px;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    & .sub_footer {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      & .footer_image {
+        width: 100px;
+        height: auto;
+      }
+      & .heading_text_footer {
+        padding: 2px;
+        & .main_heading_footer {
+          font-size: 15px;
+          font-weight: 500;
+          color: rgb(136, 135, 135);
+        }
+      }
+      & .address_icon_main_section {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        & .footer_icon {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          justify-content: center;
+          font-size: 30px;
+          padding-top: 10px;
+        }
+        & .address_footer {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          font-size: 20px;
+          color: gray;
+        }
+      }
+    }
+    & .footer_combind_two_section {
+      display: flex;
+      gap: 150px;
+      & .footer_shop_section {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 360px;
+        & .footer_shop {
+          font-size: 16px;
+          font-weight: 700;
+        }
+        & .footer_sub_item_section {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          & .footer_item_all_text {
+            font-size: 15px;
+            font-weight: 500;
+            color: rgb(165, 164, 164);
+          }
+        }
+      }
+    }
+  }
+}
+
+//   small device
+@media (max-width: 764px) {
+  .main_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    background-color: rgb(244, 242, 242);
+    padding-bottom: 20px;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    & .sub_footer {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      & .footer_image {
+        width: 100px;
+        height: auto;
+      }
+      & .heading_text_footer {
+        padding: 2px;
+        & .main_heading_footer {
+          font-size: 15px;
+          font-weight: 500;
+          color: rgb(136, 135, 135);
+        }
+      }
+      & .address_icon_main_section {
+        display: flex;
+        gap: 20px;
+        justify-items: center;
+        & .footer_icon {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          justify-content: center;
+        }
+        & .address_footer {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          font-size: 16px;
+          padding-bottom: 3px;
+        }
+      }
+    }
+    & .footer_combind_two_section {
+      display: flex;
+      gap: 20px;
+      & .footer_shop_section {
+        display: flex;
+        flex-direction: column;
+        width: 360px;
+        & .footer_shop {
+          font-size: 16px;
+          font-weight: 700;
+        }
+        & .footer_sub_item_section {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          & .footer_item_all_text {
+            font-size: 15px;
+            font-weight: 500;
+            color: rgb(165, 164, 164);
+          }
+        }
+      }
+    }
+  }
+}
