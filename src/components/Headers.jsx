@@ -71,7 +71,7 @@ const Headers = () => {
       <div className="sub_logo_ancher">
         <div className="logo">
           <img
-            src="/image/homepage/logo.jpg"
+            // src="/image/homepage/logo.jpg"
             alt="Logo"
             className="header_logo"
           />

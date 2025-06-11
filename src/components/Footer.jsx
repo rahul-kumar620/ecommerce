@@ -12,7 +12,7 @@ const Footer = () => {
     <div className="main_footer">
       <div className="sub_footer">
         <div className="footer_image">
-          <img src="\image\icon\WhatsApp Image 2025-06-09 at 6.15.13 PM (1).jpeg" />
+          {/* <img src="\image\icon\WhatsApp Image 2025-06-09 at 6.15.13 PM (1).jpeg" /> */}
         </div>
         <div className="heading_text_footer">
           <p className="main_heading_footer">
