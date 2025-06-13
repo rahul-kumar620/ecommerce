@@ -29,7 +29,7 @@ const HomeSlider = () => {
   };
   const images = [
     {
-      url: "/image/sliderimage/slider-image3.jpeg",
+      url: "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749806664/slider-image3_iupe7l.jpg",
       //   title: "Welcome Sony Collection",
       //   descriptions: "A New Online Shop Experince",
     },
