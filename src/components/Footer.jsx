@@ -1,5 +1,5 @@
 // import { Link } from "react-router-dom";
-
+//icons imports
 // icon
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlinePhone } from "react-icons/md";
