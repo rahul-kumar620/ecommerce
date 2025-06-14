@@ -15,7 +15,7 @@ import Login from "./Pages/Login/Login";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/ecommerce">
       {/* <Header /> */}
       <Headers />
       <Routes>

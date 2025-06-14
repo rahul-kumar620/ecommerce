@@ -2,8 +2,8 @@
 //icons imports
 // icon
 import { CiLocationOn } from "react-icons/ci";
-import { MdOutlinePhone } from "react-icons/md";
-import { FaWhatsapp } from "react-icons/fa";
+import { PiPhoneCallThin } from "react-icons/pi";
+import { PiWhatsappLogoThin } from "react-icons/pi";
 import { CiStopwatch } from "react-icons/ci";
 
 import "./Footer.scss";
@@ -12,7 +12,7 @@ const Footer = () => {
     <div className="main_footer">
       <div className="sub_footer">
         <div className="footer_image">
-          {/* <img src="\image\icon\WhatsApp Image 2025-06-09 at 6.15.13 PM (1).jpeg" /> */}
+          <img src="https://res.cloudinary.com/dqprmy5ro/image/upload/v1749865462/footer-icon_iiw9l9.jpg" />
         </div>
         <div className="heading_text_footer">
           <p className="main_heading_footer">
@@ -21,20 +21,25 @@ const Footer = () => {
             We aim to diliver high-quality Product to our customers.
           </p>
         </div>
+
         <div className="address_icon_main_section">
-          <div className="footer_icon">
-            <CiLocationOn />
-            <MdOutlinePhone />
-            <FaWhatsapp />
-            <CiStopwatch />
-          </div>
-          <div className="address_footer">
-            <h1>
+          <div className="address_item">
+            <CiLocationOn className=" location_icon text-[40px]" />
+            <span>
               Bypass Road Gurua Near By Jitender Baksa Dukan Gurua Gaya, 824205
-            </h1>
-            <h1> +91 - 6202802412</h1>
-            <h1> +91 - 6202802412</h1>
-            <span>Mon-Sun, 9 AM to 4 PM </span>
+            </span>
+          </div>
+          <div className="address_item">
+            <PiPhoneCallThin className="text-[25px]" />
+            <span>+91 - 9334837719</span>
+          </div>
+          <div className="address_item">
+            <PiWhatsappLogoThin className="text-[25px]" />
+            <span>+91 - 9334837719</span>
+          </div>
+          <div className="address_item">
+            <CiStopwatch className="text-[25px]" />
+            <span>Mon-Sun, 9 AM to 4 PM</span>
           </div>
         </div>
       </div>
@@ -48,7 +53,6 @@ const Footer = () => {
             <p className="footer_item_all_text">IN THE SPOTLIGHT</p>
             <p className="footer_item_all_text">BEST SELLERS</p>
             <p className="footer_item_all_text">ETHNIC WEAR</p>
-            <p className="footer_item_all_text">REFRESH YOUR DAYS</p>
             <p className="footer_item_all_text">KURTI</p>
           </div>
         </div>

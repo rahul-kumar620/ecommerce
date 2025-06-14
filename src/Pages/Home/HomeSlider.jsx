@@ -29,7 +29,7 @@ const HomeSlider = () => {
   };
   const images = [
     {
-      url: "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749806664/slider-image3_iupe7l.jpg",
+      url: "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749867084/slider-image3_ozzhyb.webp",
       //   title: "Welcome Sony Collection",
       //   descriptions: "A New Online Shop Experince",
     },
@@ -50,49 +50,57 @@ const HomeSlider = () => {
       {
         id: 1,
         name: "New Jacket",
-        image: "/image/homepage/pexels-shootsaga-30809730.webp",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749865427/pexels-shootsaga-30809730_nrurvm.webp",
         price: "$25",
       },
       {
         id: 2,
         name: "New Shirt",
-        image: "/image/homepage/pexels-dhanno-20702673.webp",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749865428/WhatsAppImage2023-08-09at18.40.20_1_1_.jpegcopy3_p8wvbi.webp",
         price: "$30",
       },
       {
         id: 3,
         name: "New Pants",
-        image: "/image/homepage/pexels-dhanno-20702676.webp",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
         price: "$28",
       },
       {
         id: 4,
         name: "New Shoes",
-        image: "/image/homepage/pexels-mk-1182794846-22431192.webp",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808440/pexels-mk-1182794846-22431192_xp4umg.webp",
         price: "$40",
       },
       {
         id: 5,
         name: "New Jacket",
-        image: "/image/homepage/pexels-shootsaga-30809730.webp",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
         price: "$25",
       },
       {
         id: 6,
         name: "New Shirt",
-        image: "/image/homepage/pexels-dhanno-20702673.webp",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
         price: "$30",
       },
       {
         id: 7,
         name: "New Pants",
-        image: "/image/homepage/pexels-dhanno-20702676.webp",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
         price: "$28",
       },
       {
         id: 8,
         name: "New Shoes",
-        image: "/image/homepage/pexels-mk-1182794846-22431192.webp",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
         price: "$40",
       },
     ],
@@ -100,25 +108,29 @@ const HomeSlider = () => {
       {
         id: 9,
         name: "Best Hoodie",
-        image: "/image/homepage/pexels-mk-1182794846-22431192.webp",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808445/pexels-mk-1182794846-22064227_xmiygk.webp",
         price: "$32",
       },
       {
         id: 10,
         name: "Top Jacket",
-        image: "/image/homepage/71lSQmEASkL._AC_UY1100_.jpg",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-neha-mishra-1851906907-28512776_dz74dx.webp",
         price: "$35",
       },
       {
         id: 11,
         name: "Best Jeans",
-        image: "/image/homepage/71lSQmEASkL._AC_UY1100_.jpg",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/71lSQmEASkL._AC_UY1100__lyfpf7.jpg",
         price: "$29",
       },
       {
         id: 12,
         name: "Best Shoes",
-        image: "/image/homepage/71lSQmEASkL._AC_UY1100_.jpg",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/71lSQmEASkL._AC_UY1100__lyfpf7.jpg",
         price: "$50",
       },
     ],
@@ -126,25 +138,29 @@ const HomeSlider = () => {
       {
         id: 13,
         name: "Sale Cap",
-        image: "/image/homepage/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D.jpg",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
         price: "$10",
       },
       {
         id: 14,
         name: "Discount Jacket",
-        image: "/image/homepage/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D.jpg",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
         price: "$18",
       },
       {
         id: 15,
         name: "Sale T-Shirt",
-        image: "/image/homepage/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D.jpg",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
         price: "$12",
       },
       {
         id: 16,
         name: "Clearance Shoes",
-        image: "/image/homepage/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D.jpg",
+        image:
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
         price: "$22",
       },
     ],
@@ -189,14 +205,14 @@ const HomeSlider = () => {
           <div className="help_section">
             <div className="two_item">
               <div className="shiping_icon">
-                <img src="\image\icon\support-1.png"></img>
+                <img src="https://res.cloudinary.com/dqprmy5ro/image/upload/v1749828205/support-1_ldwnaf.png"></img>
                 <div>
                   <p className="main_text">Free Shipping</p>
                   <span className="sub_text">Free shiping on all order</span>
                 </div>
               </div>
               <div className="shiping_icon">
-                <img src="\image\icon\support-2.png"></img>
+                <img src="https://res.cloudinary.com/dqprmy5ro/image/upload/v1749828205/support-2_j4mfpr.png"></img>
                 <div>
                   <p className="main_text">Support 24/7</p>
                   <span className="sub_text">Free shiping on all order</span>
@@ -205,14 +221,14 @@ const HomeSlider = () => {
             </div>
             <div className="two_item">
               <div className="shiping_icon">
-                <img src="\image\icon\support-3.png"></img>
+                <img src="https://res.cloudinary.com/dqprmy5ro/image/upload/v1749828205/support-3_gycaef.png"></img>
                 <div>
                   <p className="main_text">Noney Return</p>
                   <span className="sub_text">Free shiping on all order</span>
                 </div>
               </div>
               <div className="shiping_icon">
-                <img src="\image\icon\support-4.png"></img>
+                <img src="https://res.cloudinary.com/dqprmy5ro/image/upload/v1749828205/support-4_xdauto.png"></img>
                 <div className="main_text">
                   <p className="main_text">Order Discount</p>
                   <span className="sub_text">Free shiping on all order</span>
