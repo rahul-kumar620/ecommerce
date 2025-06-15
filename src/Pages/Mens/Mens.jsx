@@ -4,7 +4,7 @@ import Cards from "../../components/Cards";
 
 const Mens = () => {
   const [data, setData] = useState([]);
-  const API = "https://jsonplaceholder.typicode.com/photos";
+  const API = "hhttp://fake-shop-api.ap-south-1.elasticbeanstalk.com/app/v1/";
 
   const getMensData = async () => {
     try {
