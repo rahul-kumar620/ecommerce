@@ -51,56 +51,64 @@ const HomeSlider = () => {
     newArrivals: [
       {
         id: 1,
-        name: "New Jacket",
+        name: "Elegant Straight Cotton Kurti",
+        title: "Women’s Casual Straight Kurti with Side Slits",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749865427/pexels-shootsaga-30809730_nrurvm.webp",
         price: "$25",
       },
       {
         id: 2,
-        name: "New Shirt",
+        name: "Floral Print A-Line Kurti",
+        title: "Rayon A-Line Kurti with Floral Pattern and 3/4 Sleeves",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749865428/WhatsAppImage2023-08-09at18.40.20_1_1_.jpegcopy3_p8wvbi.webp",
         price: "$30",
       },
       {
         id: 3,
-        name: "New Pants",
+        name: "Classic Printed Cotton Kurti",
+        title: "Ethnic Straight Kurti with Block Print Design",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
         price: "$28",
       },
       {
         id: 4,
-        name: "New Shoes",
+        name: "Elegant Kurti with Embroidery",
+        title: "Designer Kurti with Intricate Thread Work",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808440/pexels-mk-1182794846-22431192_xp4umg.webp",
         price: "$40",
       },
       {
         id: 5,
-        name: "New Jacket",
+        name: "Block Print Cotton Kurti",
+        title: "Women’s Casual Block Print Straight Kurti",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
         price: "$25",
       },
       {
         id: 6,
-        name: "New Shirt",
+        name: "Comfort Fit Rayon Kurti",
+        title: "Lightweight Rayon Kurti for Daily Wear",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
         price: "$30",
       },
       {
         id: 7,
-        name: "New Pants",
+        name: "Elegant Printed Kurti",
+        title: "Stylish Kurti with Allover Print & Button Detailing",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
         price: "$28",
       },
       {
         id: 8,
-        name: "New Shoes",
+        name: "Traditional Cotton Kurti",
+        title: "Classic Cotton Kurti with Embroidered Yoke",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
         price: "$40",
@@ -109,28 +117,32 @@ const HomeSlider = () => {
     bestSellers: [
       {
         id: 9,
-        name: "Best Hoodie",
+        name: "Winter Velvet Kurti",
+        title: "Women’s Velvet Kurti with Full Sleeves",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808445/pexels-mk-1182794846-22064227_xmiygk.webp",
         price: "$32",
       },
       {
         id: 10,
-        name: "Top Jacket",
+        name: "Festive Embroidered Kurti",
+        title: "Embroidered Anarkali Kurti for Festive Occasions",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-neha-mishra-1851906907-28512776_dz74dx.webp",
         price: "$35",
       },
       {
         id: 11,
-        name: "Best Jeans",
+        name: "Denim Style Kurti",
+        title: "Trendy Denim Kurti with Button Front",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/71lSQmEASkL._AC_UY1100__lyfpf7.jpg",
         price: "$29",
       },
       {
         id: 12,
-        name: "Best Shoes",
+        name: "Elegant Print Kurti",
+        title: "Casual Printed Kurti with Straight Fit",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/71lSQmEASkL._AC_UY1100__lyfpf7.jpg",
         price: "$50",
@@ -139,28 +151,32 @@ const HomeSlider = () => {
     saleItems: [
       {
         id: 13,
-        name: "Sale Cap",
+        name: "Simple Cotton Kurti",
+        title: "Basic Cotton Kurti for Everyday Wear",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
         price: "$10",
       },
       {
         id: 14,
-        name: "Discount Jacket",
+        name: "Water-Resistant Kurti",
+        title: "Kurti with Water-Repellent Finish for Outdoor Use",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
         price: "$18",
       },
       {
         id: 15,
-        name: "Sale T-Shirt",
+        name: "Graphic Printed Kurti",
+        title: "Modern Kurti with Stylish Graphic Prints",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
         price: "$12",
       },
       {
         id: 16,
-        name: "Clearance Shoes",
+        name: "Comfort Fit Cotton Kurti",
+        title: "Breathable Cotton Kurti for Casual Days",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
         price: "$22",
@@ -302,59 +318,6 @@ const HomeSlider = () => {
         {/* product image section  start*/}
         <div>
           <div>
-            {/* <div className="main_image_section">
-              {products[selectedCategory]
-                .reduce((rows, product, index, array) => {
-                  if (index % 4 === 0) {
-                    rows.push(array.slice(index, index + 4));
-                  }
-                  return rows;
-                }, [])
-                .map((pair, rowIndex) => (
-                  <div className="combind_two_image" key={rowIndex}>
-                    {pair.map((product) => (
-                      <div className="product_image_section" key={product.id}>
-                        <div className="image_container">
-                          <img src={product.image} alt={product.name} />
-                          <div className="overlay_buttons">
-                            <button
-                              className="like_btn"
-                              onClick={() => handleLike(product.id)}
-                            >
-                              {likedItems[product.id] ? (
-                                <IoHeartSharp className="text-red-500 text-2xl" />
-                              ) : (
-                                <IoHeartOutline className="text-2xl text-gray-800" />
-                              )}
-                            </button>
-                            <button className="buy_now_btn">Buy Now</button>
-                            <button
-                              className="view_btn"
-                              onClick={() => handleView(product.id)}
-                            >
-                              <IoEyeOutline className="text-2xl text-gray-800" />
-                            </button>
-                          </div>
-                        </div>
-                        <div className="product_text_section">
-                          <h3>{product.name}</h3>
-                          <div className="product_rating">
-                            <IoStarOutline />
-                            <IoStarOutline />
-                            <IoStarOutline />
-                            <IoStarOutline />
-                            <IoStarOutline />
-                          </div>
-                          <div className="product_price">
-                            <p>{product.price}</p>
-                            <span>{product.price}</span>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                ))}
-            </div> */}
             <div className="main_image_section">
               {chunkedProducts.map((group, rowIndex) => (
                 <div className="combind_two_image" key={rowIndex}>

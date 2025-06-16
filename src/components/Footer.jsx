@@ -12,7 +12,7 @@ const Footer = () => {
     <div className="main_footer">
       <div className="sub_footer">
         <div className="footer_image">
-          <img src="https://res.cloudinary.com/dqprmy5ro/image/upload/v1749865462/footer-icon_iiw9l9.jpg" />
+          <img src="https://res.cloudinary.com/dqprmy5ro/image/upload/v1750063720/footer-image_mjxoyo.jpg" />
         </div>
         <div className="heading_text_footer">
           <p className="main_heading_footer">
