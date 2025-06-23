@@ -81,5 +81,3 @@ const Headers = () => {
 };
 
 export default Headers;
-
-// https://jsonplaceholder.typicode.com/

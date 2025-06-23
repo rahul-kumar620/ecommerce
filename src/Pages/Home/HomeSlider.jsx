@@ -35,11 +35,11 @@ const HomeSlider = () => {
       //   title: "Welcome Sony Collection",
       //   descriptions: "A New Online Shop Experince",
     },
-    // {
-    // url: "/image/sliderimage/1743513286313_7MRY1GHPD7_2025-04-01_1.jpg",
-    // title: "2025 Latest Style",
-    // description: ["Trending Men's", "Collection"],
-    // },
+    {
+      url: "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750093581/881852a6-808f-4d74-afb8-b39ff9e841d4_g1toql.jpg",
+      // title: "2025 Latest Style",
+      // description: ["Trending Men's", "Collection"],
+    },
     // {
     // url: "/image/sliderimage/1743513286313_7MRY1GHPD7_2025-04-01_1.jpg",
     //   title: "Image 3",
@@ -162,7 +162,7 @@ const HomeSlider = () => {
         name: "Water-Resistant Kurti",
         title: "Kurti with Water-Repellent Finish for Outdoor Use",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750231528/jay-shree-4002-series-simar-saree-2227_yhvacr.webp",
         price: "$18",
       },
       {
@@ -170,7 +170,7 @@ const HomeSlider = () => {
         name: "Graphic Printed Kurti",
         title: "Modern Kurti with Stylish Graphic Prints",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750231527/fancy-cotton-desginer-shirt-496_bgcchx.jpg",
         price: "$12",
       },
       {
@@ -178,7 +178,7 @@ const HomeSlider = () => {
         name: "Comfort Fit Cotton Kurti",
         title: "Breathable Cotton Kurti for Casual Days",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750231527/fancy-cotton-desginer-shirt-496_bgcchx.jpg",
         price: "$22",
       },
     ],

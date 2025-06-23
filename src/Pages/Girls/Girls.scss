@@ -1,0 +1,338 @@
+.main-container-girls {
+  padding-top: 130px;
+  padding-left: 24px;
+  padding-right: 24px;
+  & .heading-section {
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 24px;
+    & .text-head {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 28px;
+    }
+  }
+  & .filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    & .left-filter-side {
+      display: flex;
+      gap: 20px;
+      & .left-side-text {
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(173, 171, 171);
+        cursor: pointer;
+      }
+      & .left-side-texts {
+        font-size: 17px;
+        font-weight: 400;
+        cursor: pointer;
+      }
+      & .dropdown {
+        display: none;
+        flex-direction: column;
+        position: relative;
+        & .dropdown-content {
+          position: absolute;
+          display: none;
+          flex-direction: column;
+          gap: 10px;
+          padding: 20px;
+          top: 100%;
+          left: 0;
+          background: white;
+          width: 200px;
+          z-index: 999;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          & .open {
+            display: flex;
+          }
+        }
+      }
+    }
+    & .right-side-sorteds {
+      display: flex;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  .main-girls-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    & .all-content-section {
+      width: 300px;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      transition: box-shadow 0.3s;
+      & .image-main-container {
+        padding: 0px;
+        position: relative;
+
+        & .image-section-girls {
+          width: 350px;
+          height: auto;
+          object-fit: cover;
+        }
+
+        & .overlay_buttons {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          display: none; // initially hidden
+          justify-content: space-between;
+          align-items: center;
+          background-color: rgb(250, 229, 201);
+          padding: 6px;
+
+          & .like_btn,
+          & .view_btn {
+            background: none;
+            border: none;
+            color: rgb(79, 78, 78);
+            font-size: 22px;
+            cursor: pointer;
+          }
+
+          & .buy_now_btn {
+            flex: 1;
+            background-color: rgb(248, 238, 227);
+            color: rgb(80, 79, 79);
+            border: none;
+            padding: 2px;
+            margin: 0 10px;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+          }
+        }
+
+        &:hover {
+          .overlay_buttons {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  .info {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 16px;
+  }
+
+  .product-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+  }
+
+  .product-title {
+    font-size: 14px;
+    color: #777;
+  }
+
+  .pricing {
+    padding: 3px;
+    border-top: 1px solid #f1f1f1;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .product-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .product-span {
+    font-size: 14px;
+    color: #ff5722;
+    text-decoration: line-through;
+    font-weight: 500;
+  }
+}
+
+// medium device
+
+@media (max-width: 1026px) {
+  .main-container-girls {
+    padding-top: 110px;
+    padding-left: 24px;
+    padding-right: 24px;
+    & .heading-section {
+      display: flex;
+      justify-content: center;
+
+      padding-bottom: 24px;
+      & .text-head {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 28px;
+      }
+    }
+    & .filter-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 16px;
+      & .left-filter-side {
+        display: flex;
+        gap: 20px;
+        & .left-side-text {
+          font-size: 16px;
+          font-weight: 500;
+          color: rgb(173, 171, 171);
+          cursor: pointer;
+        }
+        & .left-side-texts {
+          font-size: 17px;
+          font-weight: 400;
+          cursor: pointer;
+        }
+        & .dropdown {
+          display: none !important;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          & .dropdown-content {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            top: 100%;
+            left: 0;
+            background: white;
+            width: 200px;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            & .dropdown-content.open {
+              display: block !important;
+            }
+          }
+        }
+      }
+      & .right-side-sorteds {
+        display: flex;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+
+    .main-girls-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      & .all-content-section {
+        width: 300px;
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        overflow: hidden;
+        text-align: center;
+        transition: box-shadow 0.3s;
+        & .image-main-container {
+          padding: 0px;
+          position: relative;
+
+          & .image-section-girls {
+            width: 350px;
+            height: auto;
+            object-fit: cover;
+          }
+
+          & .overlay_buttons {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: none; // initially hidden
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(250, 229, 201);
+            padding: 6px;
+
+            & .like_btn,
+            & .view_btn {
+              background: none;
+              border: none;
+              color: rgb(79, 78, 78);
+              font-size: 22px;
+              cursor: pointer;
+            }
+
+            & .buy_now_btn {
+              flex: 1;
+              background-color: rgb(248, 238, 227);
+              color: rgb(80, 79, 79);
+              border: none;
+              padding: 2px;
+              margin: 0 10px;
+              border-radius: 4px;
+              font-weight: 500;
+              cursor: pointer;
+            }
+          }
+
+          &:hover {
+            .overlay_buttons {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+    .info {
+      padding-left: 8px;
+      padding-right: 8px;
+      padding-top: 16px;
+    }
+
+    .product-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .product-title {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .pricing {
+      padding: 3px;
+      border-top: 1px solid #f1f1f1;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .product-price {
+      font-size: 16px;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .product-span {
+      font-size: 14px;
+      color: #ff5722;
+      text-decoration: line-through;
+      font-weight: 500;
+    }
+  }
+}

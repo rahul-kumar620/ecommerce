@@ -24,9 +24,8 @@ function App() {
         <Route path="/girls" element={<Girls />} />
         <Route path="/mens" element={<Mens />} />
         <Route path="/womens" element={<Women />} />
-        <Route path="/Productdetails/:id" element={<ProductDetails />} />
-
         <Route path="/login" element={<Login />} />
+        <Route path="/Productdetails/:id" element={<ProductDetails />} />
       </Routes>
       <Footer />
     </Router>
