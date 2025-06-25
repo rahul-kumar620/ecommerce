@@ -33,12 +33,11 @@
         cursor: pointer;
       }
       & .dropdown {
-        display: none;
         flex-direction: column;
         position: relative;
         & .dropdown-content {
           position: absolute;
-          display: none;
+          display: flex;
           flex-direction: column;
           gap: 10px;
           padding: 20px;

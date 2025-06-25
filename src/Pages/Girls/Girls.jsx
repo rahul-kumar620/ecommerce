@@ -5,9 +5,10 @@ import { IoEyeOutline, IoHeartOutline, IoHeartSharp } from "react-icons/io5";
 import "./Girls.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const Girls = () => {
-  const [likedItems, setLikedItems] = useState({});
+const Girls = ({ likedItems, setLikedItems }) => {
+  // const [likedItems, setLikedItems] = useState({});
   // filter ke liye
   const [openDropdown, setOpenDropdown] = useState(null);
   const navigate = useNavigate();
@@ -346,5 +347,8 @@ const Girls = () => {
     </>
   );
 };
-
+Girls.propTypes = {
+  likedItems: PropTypes.object.isRequired,
+  setLikedItems: PropTypes.func.isRequired,
+};
 export default Girls;

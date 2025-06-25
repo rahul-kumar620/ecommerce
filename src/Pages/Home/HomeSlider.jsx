@@ -13,10 +13,10 @@ import { IoStarOutline } from "react-icons/io5";
 import { IoHeartOutline, IoHeartSharp, IoEyeOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
-const HomeSlider = () => {
+const HomeSlider = ({ likedItems, setLikedItems }) => {
   const [itemsPerRow, setItemsPerRow] = useState(4);
-  const [likedItems, setLikedItems] = useState({});
   const [selectedCategory, setSelectedCategory] = useState("newArrivals");
 
   const navigate = useNavigate();
@@ -366,14 +366,55 @@ const HomeSlider = () => {
             </div>
           </div>
 
-          {/* image section part two */}
+          {/* background image part alag section start*/}
+          <div className="welcome-main-page">
+            <div className="background-container">
+              <img
+                src="https://res.cloudinary.com/dqprmy5ro/image/upload/v1750751349/banner-71_rdl9dw.webp"
+                alt="Background"
+                className="background-image"
+              />
+              <div className="overlay-content">
+                <img
+                  src="https://res.cloudinary.com/dqprmy5ro/image/upload/v1750751888/Add-a-heading-2-r36huorelvjcvcnh8j62zri8jnx9mmsu331rh4judk_rtzvhd.webp"
+                  alt="Left Side Image"
+                  className="left-image"
+                />
+                <div className="right-text">
+                  <h2 className="right-side-header">
+                    Welcome to Soni Collection
+                  </h2>
+                  <span className="right-side-sub-header">
+                    A Curated Celebration of Grace and Glamour
+                  </span>
+                  <p className="right-side-all-text">
+                    where tradition meets contemporary style. Discover a curated
+                    range of
+                    <br /> sarees that blend the richness of Indian heritage
+                    with the flair of modern
+                    <br /> fashion. From luxurious silk drapes to vibrant
+                    georgettes and intricately <br />
+                    embroidered masterpieces, every piece in the Soni Collection
+                    is crafted
+                    <br /> for the modern woman who embraces tradition with
+                    confidence and grace.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          {/* image section part two  end*/}
+          {/* background image part alag section end*/}
         </div>
         {/* product image section  start*/}
       </div>
     </>
   );
+};
+
+HomeSlider.propTypes = {
+  likedItems: PropTypes.object.isRequired,
+  setLikedItems: PropTypes.func.isRequired,
 };
 
 export default HomeSlider;

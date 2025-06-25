@@ -1,75 +1,66 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import "./Login.scss";
+const Login = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-const LoginForm = () => {
-  const [employeeId, setEmployeeId] = useState("");
-  const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState({});
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Simple validation logic
-    const newErrors = {};
-    if (!employeeId.trim()) newErrors.employeeId = "Employee ID is required.";
-    if (!password) newErrors.password = "Password is required.";
-    else if (password.length < 6)
-      newErrors.password = "Minimum 6 characters required.";
-
-    setErrors(newErrors);
-
-    if (Object.keys(newErrors).length === 0) {
-      // Proceed with login logic here (API call, etc.)
-      console.log("Form submitted:", { employeeId, password });
-    }
-  };
-
+  function onSubmit(data) {
+    console.log("submiting the form", data);
+  }
   return (
-    <form className="form_class" onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="employeeId">Employee ID</label>
-        <input
-          type="text"
-          id="employeeId"
-          placeholder="Employee Id"
-          value={employeeId}
-          onChange={(e) => setEmployeeId(e.target.value)}
-        />
-        {errors.employeeId && (
-          <div className="text-danger error_message_login">
-            {errors.employeeId}
+    <>
+      <div className="login-container">
+        <div className="sub-contaner">
+          <div className="login-left">
+            <img
+              src="https://res.cloudinary.com/dqprmy5ro/image/upload/v1750745819/pexels-sabir-khan-shourov-1169063-16709284_wtdyn0.jpg"
+              alt="Login visual"
+            />
           </div>
-        )}
-      </div>
+          <div className="login-right">
+            <div className="login-form">
+              <h2 className="main-heading">Account Login</h2>
+              {/* form section */}
+              <form onSubmit={handleSubmit(onSubmit)}>
+                {/* Username */}
+                <input
+                  type="text"
+                  placeholder="Username"
+                  {...register("username", {
+                    required: "Username is required",
+                  })}
+                />
+                {errors.username && <p>{errors.username.message}</p>}
 
-      <div className="password_class">
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        {errors.password && (
-          <div className="text-danger error_message_login">
-            {errors.password}
+                {/* Password */}
+                <input
+                  type="password"
+                  placeholder="Password"
+                  {...register("password", {
+                    required: "Password is required",
+                    minLength: {
+                      value: 6,
+                      message: "Password must be at least 6 characters",
+                    },
+                    pattern: {
+                      value: /^(?=.*[A-Z])(?=.*\d).+$/,
+                      message: "Must include one uppercase and one number",
+                    },
+                  })}
+                />
+                {errors.password && <p>{errors.password.message}</p>}
+
+                <button type="submit">Login</button>
+              </form>
+            </div>
           </div>
-        )}
+        </div>
       </div>
-
-      <div>
-        <Link className="forgot_p" to="/account/forgot-password">
-          Forgot password?
-        </Link>
-      </div>
-
-      <button type="submit" className="login_btn">
-        Login
-      </button>
-    </form>
+    </>
   );
 };
 
-export default LoginForm;
+export default Login;

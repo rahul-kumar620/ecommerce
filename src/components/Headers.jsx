@@ -4,14 +4,16 @@ import { CiUser, CiSearch } from "react-icons/ci";
 import { GiShoppingCart } from "react-icons/gi";
 import { FaBars } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const Headers = () => {
+const Headers = ({ likedItems }) => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false); // For mobile menu toggle
 
   const handleLoginClick = () => {
     navigate("/login");
   };
+  const likeCount = Object.values(likedItems).filter(Boolean).length;
 
   return (
     <div className="main_container">
@@ -74,10 +76,16 @@ const Headers = () => {
       <div className="icon_section">
         <CiUser className="header_icon" onClick={handleLoginClick} />
         <CiSearch className="header_icon" />
-        <GiShoppingCart className="header_icon" />
+        <div>
+          <GiShoppingCart className="header_icon" />
+          <span className="cart_badge">{likeCount}</span>
+        </div>
       </div>
     </div>
   );
+};
+Headers.propTypes = {
+  likedItems: PropTypes.object.isRequired,
 };
 
 export default Headers;
