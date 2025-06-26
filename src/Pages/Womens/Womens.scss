@@ -1,0 +1,567 @@
+.main-women-section {
+  padding-top: 65px;
+  & .sub-women-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    & .catagari-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      & .catagari-section-heading {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      & .catagari-all-section {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        & .catagri-image-section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          & .circle-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 60%;
+            border: 2px solid #ccc;
+          }
+        }
+      }
+    }
+    & .filter-section-women {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 16px;
+      & .left-filter-side-women {
+        display: flex;
+        gap: 20px;
+        & .left-side-text-women {
+          display: block;
+          font-size: 16px;
+          font-weight: 500;
+          color: rgb(173, 171, 171);
+          cursor: pointer;
+        }
+        & .left-side-texts {
+          font-size: 17px;
+          font-weight: 400;
+          cursor: pointer;
+        }
+        & .dropdown-women {
+          display: none;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          & .dropdown-content-women {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            top: 100%;
+            left: 0;
+            background: white;
+            width: 200px;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            & .open-women {
+              display: flex;
+            }
+          }
+        }
+      }
+      & .right-side-sorteds-women {
+        display: flex;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+    .main-women-section-image {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      & .all-content-women-section {
+        width: 300px;
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        overflow: hidden;
+        text-align: center;
+        transition: box-shadow 0.3s;
+        & .image-main-women-container {
+          padding: 0px;
+          position: relative;
+
+          & .image-section-women {
+            width: 350px;
+            height: auto;
+            object-fit: cover;
+          }
+
+          & .overlay_buttons-women {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(250, 229, 201);
+            padding: 6px;
+
+            & .like_btn-women,
+            & .view_btn-women {
+              background: none;
+              border: none;
+              color: rgb(79, 78, 78);
+              font-size: 22px;
+              cursor: pointer;
+            }
+
+            & .buy_now_btn-women {
+              flex: 1;
+              background-color: rgb(248, 238, 227);
+              color: rgb(80, 79, 79);
+              border: none;
+              padding: 2px;
+              margin: 0 10px;
+              border-radius: 4px;
+              font-weight: 500;
+              cursor: pointer;
+            }
+          }
+
+          &:hover {
+            .overlay_buttons-women {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+    .info-women {
+      padding-left: 8px;
+      padding-right: 8px;
+      padding-top: 16px;
+    }
+
+    .product-name-women {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .product-title-women {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .pricing-women {
+      padding: 3px;
+      border-top: 1px solid #f1f1f1;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .product-price-women {
+      font-size: 16px;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .product-span-women {
+      font-size: 14px;
+      color: #ff5722;
+      text-decoration: line-through;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 1026px) {
+  .main-women-section {
+    padding-top: 65px;
+    & .sub-women-section {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      & .catagari-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        & .catagari-section-heading {
+          text-align: center;
+          font-size: 25px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        & .catagari-all-section {
+          display: flex;
+          justify-content: center;
+          gap: 30px;
+          & .catagri-image-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & .circle-img {
+              width: 100px;
+              height: 100px;
+              object-fit: cover;
+              border-radius: 60%;
+              border: 2px solid #ccc;
+            }
+          }
+        }
+      }
+      & .filter-section-women {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+        & .left-filter-side-women {
+          display: flex;
+          gap: 20px;
+          & .left-side-text-women {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            color: rgb(173, 171, 171);
+            cursor: pointer;
+          }
+          & .left-side-texts {
+            font-size: 17px;
+            font-weight: 400;
+            cursor: pointer;
+          }
+          & .dropdown-women {
+            display: none;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            & .dropdown-content-women {
+              position: absolute;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              padding: 20px;
+              top: 100%;
+              left: 0;
+              background: white;
+              width: 200px;
+              z-index: 999;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+              & .open-women {
+                display: flex;
+              }
+            }
+          }
+        }
+        & .right-side-sorteds-women {
+          display: flex;
+          gap: 10px;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+      .main-women-section-image {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        & .all-content-women-section {
+          width: 300px;
+          background: #fff;
+          border: 1px solid #eee;
+          border-radius: 8px;
+          overflow: hidden;
+          text-align: center;
+          transition: box-shadow 0.3s;
+          & .image-main-women-container {
+            padding: 0px;
+            position: relative;
+
+            & .image-section-women {
+              width: 350px;
+              height: auto;
+              object-fit: cover;
+            }
+
+            & .overlay_buttons-women {
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              display: none;
+              justify-content: space-between;
+              align-items: center;
+              background-color: rgb(250, 229, 201);
+              padding: 6px;
+
+              & .like_btn-women,
+              & .view_btn-women {
+                background: none;
+                border: none;
+                color: rgb(79, 78, 78);
+                font-size: 22px;
+                cursor: pointer;
+              }
+
+              & .buy_now_btn-women {
+                flex: 1;
+                background-color: rgb(248, 238, 227);
+                color: rgb(80, 79, 79);
+                border: none;
+                padding: 2px;
+                margin: 0 10px;
+                border-radius: 4px;
+                font-weight: 500;
+                cursor: pointer;
+              }
+            }
+
+            &:hover {
+              .overlay_buttons-women {
+                display: flex;
+              }
+            }
+          }
+        }
+      }
+      .info-women {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 16px;
+      }
+
+      .product-name-women {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 4px;
+      }
+
+      .product-title-women {
+        font-size: 14px;
+        color: #777;
+      }
+
+      .pricing-women {
+        padding: 3px;
+        border-top: 1px solid #f1f1f1;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .product-price-women {
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+      }
+
+      .product-span-women {
+        font-size: 14px;
+        color: #ff5722;
+        text-decoration: line-through;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-women-section {
+    padding-top: 65px;
+    & .sub-women-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      & .catagari-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        & .catagari-section-heading {
+          text-align: center;
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        & .catagari-all-section {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 20px;
+          & .catagri-image-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & .circle-img {
+              width: 70px;
+              height: 70px;
+              object-fit: cover;
+              border-radius: 60%;
+              border: 2px solid #ccc;
+            }
+          }
+        }
+      }
+      & .filter-section-women {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 16px;
+        & .left-filter-side-women {
+          display: flex;
+          gap: 20px;
+          & .left-side-text-women {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            color: rgb(173, 171, 171);
+            cursor: pointer;
+          }
+          & .left-side-texts {
+            font-size: 17px;
+            font-weight: 400;
+            cursor: pointer;
+          }
+          & .dropdown-women {
+            display: none !important;
+            flex-direction: column;
+            position: relative;
+            & .dropdown-content-women {
+              position: absolute;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              padding: 20px;
+              top: 100%;
+              left: 0;
+              background: white;
+              width: 200px;
+              z-index: 999;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+              & .open-women {
+                display: flex;
+              }
+            }
+          }
+        }
+        & .right-side-sorteds-women {
+          display: flex;
+          gap: 10px;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+      .main-women-section-image {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        & .all-content-women-section {
+          width: 300px;
+          background: #fff;
+          border: 1px solid #eee;
+          border-radius: 8px;
+          overflow: hidden;
+          text-align: center;
+          transition: box-shadow 0.3s;
+          & .image-main-women-container {
+            padding: 0px;
+            position: relative;
+
+            & .image-section-women {
+              width: 350px;
+              height: auto;
+              object-fit: cover;
+            }
+
+            & .overlay_buttons-women {
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              display: none;
+              justify-content: space-between;
+              align-items: center;
+              background-color: rgb(250, 229, 201);
+              padding: 6px;
+
+              & .like_btn-women,
+              & .view_btn-women {
+                background: none;
+                border: none;
+                color: rgb(79, 78, 78);
+                font-size: 22px;
+                cursor: pointer;
+              }
+
+              & .buy_now_btn-women {
+                flex: 1;
+                background-color: rgb(248, 238, 227);
+                color: rgb(80, 79, 79);
+                border: none;
+                padding: 2px;
+                margin: 0 10px;
+                border-radius: 4px;
+                font-weight: 500;
+                cursor: pointer;
+              }
+            }
+
+            &:hover {
+              .overlay_buttons-women {
+                display: flex;
+              }
+            }
+          }
+        }
+      }
+      .info-women {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 16px;
+      }
+
+      .product-name-women {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 4px;
+      }
+
+      .product-title-women {
+        font-size: 14px;
+        color: #777;
+      }
+
+      .pricing-women {
+        padding: 3px;
+        border-top: 1px solid #f1f1f1;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .product-price-women {
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+      }
+
+      .product-span-women {
+        font-size: 14px;
+        color: #ff5722;
+        text-decoration: line-through;
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -35,7 +35,12 @@ function App() {
           }
         />
         <Route path="/mens" element={<Mens />} />
-        <Route path="/womens" element={<Women />} />
+        <Route
+          path="/womens"
+          element={
+            <Women likedItems={likedItems} setLikedItems={setLikedItems} />
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/Productdetails/:id" element={<ProductDetails />} />
       </Routes>
