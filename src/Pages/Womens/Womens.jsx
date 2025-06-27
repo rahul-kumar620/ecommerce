@@ -17,16 +17,20 @@ const Womens = ({ likedItems, setLikedItems }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const navigate = useNavigate();
-  const handleLike = (id) => {
+  const handleLike = (section, id) => {
+    const likeKey = `${section}-${id}`;
     setLikedItems((prev) => ({
       ...prev,
-      [id]: !prev[id],
+      [likeKey]: !prev[likeKey],
     }));
   };
 
-  const handleView = (id) => {
-    navigate(`/Productdetails/${id}`);
+  const handleView = (product) => {
+    navigate(`/Productdetails/${product.id}`, { state: { product } });
   };
+  // const handleView = (id) => {
+  //   navigate(`/Productdetails/${id}`);
+  // };
 
   // filter code likhe toggle ke liye
   const toggleDropdown = (type) => {
@@ -410,9 +414,9 @@ const Womens = ({ likedItems, setLikedItems }) => {
                 <div className="overlay_buttons-women">
                   <button
                     className="like_btn-women"
-                    onClick={() => handleLike(product.id)}
+                    onClick={() => handleLike("womens", product.id)}
                   >
-                    {likedItems[product.id] ? (
+                    {likedItems[`womens-${product.id}`] ? (
                       <IoHeartSharp className="text-red-500 " />
                     ) : (
                       <IoHeartOutline className="like_btn-women" />
@@ -421,7 +425,7 @@ const Womens = ({ likedItems, setLikedItems }) => {
                   <button className="buy_now_btn-women">Buy Now</button>
                   <button
                     className="view_btn-women"
-                    onClick={() => handleView(product.id)}
+                    onClick={() => handleView(product)}
                   >
                     <IoEyeOutline className="view_btn-women" />
                   </button>

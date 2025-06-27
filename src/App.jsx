@@ -11,10 +11,18 @@ import Footer from "./components/Footer";
 import Headers from "./components/Headers";
 import Login from "./Pages/Login/Login";
 import ProductDetails from "./components/ProductDetails";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [likedItems, setLikedItems] = useState({});
+  const [likedItems, setLikedItems] = useState(() => {
+    const storedLikes = localStorage.getItem("likedItems");
+    return storedLikes ? JSON.parse(storedLikes) : {};
+  });
+
+  useEffect(() => {
+    localStorage.setItem("likedItems", JSON.stringify(likedItems));
+  }, [likedItems]);
+
   return (
     <Router basename="/ecommerce">
       {/* <Header /> */}

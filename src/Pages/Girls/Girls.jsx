@@ -12,15 +12,19 @@ const Girls = ({ likedItems, setLikedItems }) => {
   // filter ke liye
   const [openDropdown, setOpenDropdown] = useState(null);
   const navigate = useNavigate();
-  const handleLike = (id) => {
+  const handleLike = (section, id) => {
+    const likeKey = `${section}-${id}`;
     setLikedItems((prev) => ({
       ...prev,
-      [id]: !prev[id],
+      [likeKey]: !prev[likeKey],
     }));
   };
-  const handleView = (id) => {
-    navigate(`/Productdetails/${id}`);
+  const handleView = (product) => {
+    navigate(`/Productdetails/${product.id}`, { state: { product } });
   };
+  // const handleView = (id) => {
+  //   navigate(`/Productdetails/${id}`);
+  // };
   // filter code likhe toggle ke liye
   const toggleDropdown = (type) => {
     setOpenDropdown(openDropdown === type ? null : type);
@@ -314,9 +318,9 @@ const Girls = ({ likedItems, setLikedItems }) => {
                 <div className="overlay_buttons">
                   <button
                     className="like_btn"
-                    onClick={() => handleLike(product.id)}
+                    onClick={() => handleLike("girls", product.id)}
                   >
-                    {likedItems[product.id] ? (
+                    {likedItems[`girls-${product.id}`] ? (
                       <IoHeartSharp className="text-red-500 " />
                     ) : (
                       <IoHeartOutline className="like_btn" />
@@ -325,7 +329,7 @@ const Girls = ({ likedItems, setLikedItems }) => {
                   <button className="buy_now_btn">Buy Now</button>
                   <button
                     className="view_btn"
-                    onClick={() => handleView(product.id)}
+                    onClick={() => handleView(product)}
                   >
                     <IoEyeOutline className="view_btn" />
                   </button>
