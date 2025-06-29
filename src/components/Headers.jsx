@@ -15,6 +15,10 @@ const Headers = ({ likedItems }) => {
   };
   const likeCount = Object.values(likedItems).filter(Boolean).length;
 
+  const handleFavorites = () => {
+    navigate("/favorites");
+  };
+
   return (
     <div className="main_container">
       <div className="sub_logo_ancher">
@@ -77,7 +81,7 @@ const Headers = ({ likedItems }) => {
         <CiUser className="header_icon" onClick={handleLoginClick} />
         <CiSearch className="header_icon" />
         <div>
-          <GiShoppingCart className="header_icon" />
+          <GiShoppingCart onClick={handleFavorites} className="header_icon" />
           <span className="cart_badge">{likeCount}</span>
         </div>
       </div>

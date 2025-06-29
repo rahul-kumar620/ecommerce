@@ -34,21 +34,25 @@ const Login = () => {
           <div className="login-form">
             <h2 className="main-heading">{isSignup ? "Sign Up" : "Login"}</h2>
 
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form className="form-section" onSubmit={handleSubmit(onSubmit)}>
               {/* Username */}
               <input
+                className="input-section"
                 type="text"
                 placeholder="Username"
                 {...register("username", {
                   required: "Username is required",
                 })}
               />
-              {errors.username && <p>{errors.username.message}</p>}
+              {errors.username && (
+                <p className="error-section">{errors.username.message}</p>
+              )}
 
               {/* Email only for Signup */}
               {isSignup && (
                 <>
                   <input
+                    className="input-section"
                     type="email"
                     placeholder="Email"
                     {...register("email", {
@@ -59,12 +63,15 @@ const Login = () => {
                       },
                     })}
                   />
-                  {errors.email && <p>{errors.email.message}</p>}
+                  {errors.email && (
+                    <p className="error-section">{errors.email.message}</p>
+                  )}
                 </>
               )}
 
               {/* Password */}
               <input
+                className="input-section"
                 type="password"
                 placeholder="Password"
                 {...register("password", {
@@ -79,17 +86,19 @@ const Login = () => {
                   },
                 })}
               />
-              {errors.password && <p>{errors.password.message}</p>}
+              {errors.password && (
+                <p className="error-section">{errors.password.message}</p>
+              )}
 
               <button type="submit">{isSignup ? "Sign Up" : "Login"}</button>
             </form>
 
             {/* Toggle Button */}
-            <p className="toggle-form-text text-[14 px] p-1 flex justify-center gap-3">
+            <p className="toggle-form-text">
               {isSignup ? "Already have an account?" : "Don't have an account?"}{" "}
               <button
                 type="button"
-                className="toggle-btn bg-amber-500 border-1 rounded-sm"
+                className="toggle-btn"
                 onClick={() => setIsSignup((prev) => !prev)}
               >
                 {isSignup ? "Login" : "Sign Up"}

@@ -12,6 +12,7 @@ import Headers from "./components/Headers";
 import Login from "./Pages/Login/Login";
 import ProductDetails from "./components/ProductDetails";
 import { useEffect, useState } from "react";
+import Favorites from "./components/Favorites";
 
 function App() {
   const [likedItems, setLikedItems] = useState(() => {
@@ -51,6 +52,7 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/Productdetails/:id" element={<ProductDetails />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
       <Footer />
     </Router>

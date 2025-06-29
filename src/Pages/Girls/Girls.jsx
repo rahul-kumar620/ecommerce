@@ -39,6 +39,7 @@ const Girls = ({ likedItems, setLikedItems }) => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749865427/pexels-shootsaga-30809730_nrurvm.webp",
         price: "1600",
         span: "1100",
+        inStock: true,
       },
       {
         id: 2,
@@ -48,6 +49,7 @@ const Girls = ({ likedItems, setLikedItems }) => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749865428/WhatsAppImage2023-08-09at18.40.20_1_1_.jpegcopy3_p8wvbi.webp",
         price: "1400",
         span: "1200",
+        inStock: false,
       },
       {
         id: 3,
@@ -326,7 +328,14 @@ const Girls = ({ likedItems, setLikedItems }) => {
                       <IoHeartOutline className="like_btn" />
                     )}
                   </button>
-                  <button className="buy_now_btn">Buy Now</button>
+                  {/* <button className="buy_now_btn">Buy Now</button> */}
+                  {product.inStock ? (
+                    <button className="buy_now_btn in-stock">In Stock</button>
+                  ) : (
+                    <button className="buy_now_btn out-of-stock">
+                      Out of Stock
+                    </button>
+                  )}
                   <button
                     className="view_btn"
                     onClick={() => handleView(product)}

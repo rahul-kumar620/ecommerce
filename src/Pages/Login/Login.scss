@@ -49,11 +49,11 @@
         font-weight: 700;
       }
 
-      form {
+      & .form-section {
         display: flex;
         flex-direction: column;
         text-align: center;
-        input {
+        & .input-section {
           padding: 12px;
           margin-bottom: 15px;
           border: 1px solid #ccc;
@@ -66,7 +66,7 @@
           }
         }
 
-        p {
+        & .error-section {
           color: red;
           font-size: 14px;
           margin-top: -10px;
@@ -91,20 +91,33 @@
           }
         }
       }
+      & .toggle-form-text {
+        font-size: 12px;
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        & .toggle-btn {
+          background-color: antiquewhite;
+          color: #575757;
+          padding: 2px;
+          border-radius: 4px;
+        }
+      }
     }
   }
 }
 
 @media (max-width: 1026px) {
   .login-container {
-    height: 65vh;
+    height: 50vh;
     width: 100%;
     background-color: #f0f0f0;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 100px;
     & .sub-contaner {
       padding: 15px;
       display: flex;
@@ -164,7 +177,7 @@
             }
           }
 
-          p {
+          & .error-section {
             color: red;
             font-size: 14px;
             margin-top: -10px;
@@ -189,6 +202,19 @@
             }
           }
         }
+        & .toggle-form-text {
+          font-size: 12px;
+          padding-top: 10px;
+          display: flex;
+          justify-content: space-around;
+          gap: 20px;
+          & .toggle-btn {
+            background-color: antiquewhite;
+            color: #575757;
+            padding: 2px;
+            border-radius: 4px;
+          }
+        }
       }
     }
   }
@@ -204,7 +230,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 70px;
     & .sub-contaner {
       padding: 15px;
       display: flex;
@@ -238,21 +264,24 @@
       .login-form {
         width: 100%;
         max-width: 400px;
-        padding: 20px;
+        // padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
 
         & .main-heading {
           text-align: center;
-          margin-bottom: 20px;
+          margin-bottom: 8px;
           color: #575757;
-          font-size: 30px;
-          font-weight: 700;
+          font-size: 25px;
+          font-weight: 600;
         }
 
-        form {
+        & .form-section {
           display: flex;
           flex-direction: column;
           text-align: center;
-          input {
+          & .input-section {
             padding: 12px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
@@ -265,17 +294,17 @@
             }
           }
 
-          p {
+          & .error-section {
             color: red;
-            font-size: 14px;
-            margin-top: -10px;
+            font-size: 12px;
+            margin-top: -9px;
             margin-bottom: 10px;
           }
 
           button {
             display: inline-block;
             width: auto;
-            padding: 10px;
+            padding: 8px;
             background-color: antiquewhite;
             color: #575757;
             font-size: 16px;
@@ -288,6 +317,19 @@
             &:hover {
               background-color: antiquewhite;
             }
+          }
+        }
+        & .toggle-form-text {
+          font-size: 14px;
+          padding-top: 5px;
+          display: flex;
+          justify-content: space-around;
+          gap: 20px;
+          & .toggle-btn {
+            background-color: antiquewhite;
+            color: #575757;
+            padding: 3px;
+            border-radius: 4px;
           }
         }
       }

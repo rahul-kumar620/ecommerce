@@ -61,6 +61,7 @@ const HomeSlider = ({ likedItems, setLikedItems }) => {
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749865427/pexels-shootsaga-30809730_nrurvm.webp",
         price: "$25",
+        inStock: true,
       },
       {
         id: 2,
@@ -69,6 +70,7 @@ const HomeSlider = ({ likedItems, setLikedItems }) => {
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749865428/WhatsAppImage2023-08-09at18.40.20_1_1_.jpegcopy3_p8wvbi.webp",
         price: "$30",
+        inStock: false,
       },
       {
         id: 3,
@@ -341,7 +343,19 @@ const HomeSlider = ({ likedItems, setLikedItems }) => {
                               <IoHeartOutline className="like_btn" />
                             )}
                           </button>
-                          <button className="buy_now_btn">Buy Now</button>
+                          {/* <button className="buy_now_btn">Buy Now</button> */}
+                          {product.inStock ? (
+                            <button className="buy_now_btn-women in-stock">
+                              In Stock
+                            </button>
+                          ) : (
+                            <button
+                              className="buy_now_btn-women out-of-stock"
+                              disabled
+                            >
+                              Out of Stock
+                            </button>
+                          )}
                           <button
                             className="view_btn"
                             onClick={() => handleView(product)}

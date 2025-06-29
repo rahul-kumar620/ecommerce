@@ -58,6 +58,7 @@ const Womens = ({ likedItems, setLikedItems }) => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750914458/ram-rasiya-vishwamitra-saree-wholesale-catalog-0-2024-01-24_12_13_42_ohyflg.jpg",
         price: "1600",
         span: "1100",
+        inStock: true,
       },
       {
         id: 2,
@@ -67,6 +68,7 @@ const Womens = ({ likedItems, setLikedItems }) => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750914362/rr-vayuputra-1-images-10_trwwcm.jpg",
         price: "1400",
         span: "1200",
+        inStock: false,
       },
       {
         id: 3,
@@ -76,6 +78,7 @@ const Womens = ({ likedItems, setLikedItems }) => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750914362/rr-vayuputra-1-images-10_trwwcm.jpg",
         price: "1200",
         span: "800",
+        inStock: true,
       },
       {
         id: 4,
@@ -112,6 +115,7 @@ const Womens = ({ likedItems, setLikedItems }) => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
         price: "1299",
         span: "1199",
+        inStock: true,
       },
       {
         id: 8,
@@ -121,6 +125,7 @@ const Womens = ({ likedItems, setLikedItems }) => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750914362/rr-vayuputra-1-images-10_trwwcm.jpg",
         price: "899",
         span: "999",
+        inStock: true,
       },
     ],
     pathshala: [
@@ -422,7 +427,14 @@ const Womens = ({ likedItems, setLikedItems }) => {
                       <IoHeartOutline className="like_btn-women" />
                     )}
                   </button>
-                  <button className="buy_now_btn-women">Buy Now</button>
+                  {/* <button className="buy_now_btn-women">Buy Now</button> */}
+                  {product.inStock ? (
+                    <button className="buy_now_btn in-stock">In Stock</button>
+                  ) : (
+                    <button className="buy_now_btn out-of-stock">
+                      Out of Stock
+                    </button>
+                  )}
                   <button
                     className="view_btn-women"
                     onClick={() => handleView(product)}
