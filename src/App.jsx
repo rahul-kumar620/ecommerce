@@ -52,7 +52,10 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/Productdetails/:id" element={<ProductDetails />} />
-        <Route path="/favorites" element={<Favorites />} />
+        <Route
+          path="/favorites"
+          element={<Favorites likedItems={likedItems} />}
+        />
       </Routes>
       <Footer />
     </Router>

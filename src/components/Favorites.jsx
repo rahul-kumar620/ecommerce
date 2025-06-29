@@ -1,99 +1,45 @@
-// import { useState } from "react";
-import { useLocation } from "react-router-dom";
+// Wishlist.jsx
+import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
-//  css
-import "./ProductDetails.scss";
+// scss
+import "./Favorites.scss";
 
-// const sizes = ["S", "M", "L", "XL"];
-
-const Favorites = () => {
-  // const [selectedSize, setSelectedSize] = useState(sizes[0]);
-  // const [quantity, setQuantity] = useState(1);
-  const location = useLocation();
-  const { product: passedProduct } = location.state || {};
-
-  const product = passedProduct;
-  if (!product) {
-    return <h2>Product not found</h2>;
-  }
-
-  // const handleAddToCart = () => {
-  //   alert(`Added ${quantity} of size ${selectedSize} to cart!`);
-  // };
+const Favorites = ({ likedItems }) => {
+  const navigate = useNavigate();
+  const likedArray = Object.values(likedItems);
 
   return (
-    <div className="product-details">
-      {/* <div className="product-container">
-        <div className="left-panel">
-          <img className="main-image" src={product.image} alt={product.name} />
-          <div className="thumbnails">
-            {[1, 2, 3, 4].map((thumb) => (
-              <img
-                key={thumb}
-                src={product.image}
-                alt={`${product.name} thumbnail ${thumb}`}
-              />
-            ))}
-          </div>
+    <div className="wishlist-container">
+      <h2 className="favorite-main-heading">Your Wishlist</h2>
+      {likedArray.length === 0 ? (
+        <p>No items in your wishlist.</p>
+      ) : (
+        <div className="wishlist-grid">
+          {likedArray.map((item) => (
+            <div key={item.id} className="wishlist-item">
+              <img src={item.image} alt={item.title} />
+              <p>{item.name}</p>
+              <p>₹{item.price}</p>
+              <button
+                onClick={() =>
+                  navigate(`/Productdetails/${item.id}`, {
+                    state: { product: item },
+                  })
+                }
+              >
+                View
+              </button>
+            </div>
+          ))}
         </div>
-        <div className="right-panel">
-          <h1>{product.name}</h1>
-          <h3>{product.title}</h3>
-          <p className="price">{product.price}</p>
-
-          <div className="description">
-            <h4>Description</h4>
-            <p>{product.description}</p>
-            <p>
-              Features include breathable material, intricate embroidery, and an
-              elegant design that suits all ages.
-            </p>
-          </div>
-
-          <div className="size-selector">
-            <label htmlFor="size">Select Size:</label>
-            <select
-              id="size"
-              value={selectedSize}
-              onChange={(e) => setSelectedSize(e.target.value)}
-            >
-              {sizes.map((size) => (
-                <option key={size} value={size}>
-                  {size}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div className="quantity-selector">
-            <label htmlFor="quantity">Quantity:</label>
-            <input
-              id="quantity"
-              type="number"
-              min={1}
-              value={quantity}
-              onChange={(e) => setQuantity(Number(e.target.value))}
-            />
-          </div>
-
-          <div className="buttons">
-            <button onClick={handleAddToCart}>Add to Cart</button>
-            <button>Buy Now</button>
-          </div>
-
-          <div className="extra-details">
-            <h4>Product Details</h4>
-            <ul>
-              <li>Material: Cotton & Rayon blend</li>
-              <li>Care Instructions: Hand wash recommended</li>
-              <li>Fit: Regular fit with side slits</li>
-              <li>Occasion: Casual, Festive, Daily Wear</li>
-            </ul>
-          </div>
-        </div>
-      </div> */}
+      )}
     </div>
   );
+};
+
+Favorites.propTypes = {
+  likedItems: PropTypes.object.isRequired,
 };
 
 export default Favorites;
