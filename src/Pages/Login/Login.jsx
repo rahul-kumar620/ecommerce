@@ -26,7 +26,7 @@ const Login = () => {
       <div className="sub-contaner">
         <div className="login-left">
           <img
-            src="https://res.cloudinary.com/dqprmy5ro/image/upload/v1750745819/pexels-sabir-khan-shourov-1169063-16709284_wtdyn0.jpg"
+            src="https://res.cloudinary.com/dqprmy5ro/image/upload/v1750751888/Add-a-heading-2-r36huorelvjcvcnh8j62zri8jnx9mmsu331rh4judk_rtzvhd.webp"
             alt="Login visual"
           />
         </div>

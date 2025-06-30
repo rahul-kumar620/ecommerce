@@ -14,7 +14,7 @@ import PropTypes from "prop-types";
 
 const Womens = ({ likedItems, setLikedItems }) => {
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState("banarshi");
 
   const navigate = useNavigate();
   const handleLike = (section, product) => {
@@ -145,7 +145,7 @@ const Womens = ({ likedItems, setLikedItems }) => {
         name: "Winter Velvet Kurti",
         title: "Women’s Velvet Kurti with Full Sleeves",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808445/pexels-mk-1182794846-22064227_xmiygk.webp",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750993694/52664-204_kcadnq.webp",
         price: "1650",
         span: "1300",
       },
@@ -154,7 +154,7 @@ const Womens = ({ likedItems, setLikedItems }) => {
         name: "Festive Embroidered Kurti",
         title: "Embroidered Anarkali Kurti for Festive Occasions",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-neha-mishra-1851906907-28512776_dz74dx.webp",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750993694/52664-203_rwh1lc.webp",
         price: "$35",
       },
       {
@@ -162,7 +162,7 @@ const Womens = ({ likedItems, setLikedItems }) => {
         name: "Denim Style Kurti",
         title: "Trendy Denim Kurti with Button Front",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/71lSQmEASkL._AC_UY1100__lyfpf7.jpg",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750993694/52664-204_1_iy7zyg.webp",
         price: "$29",
       },
       {
@@ -170,7 +170,7 @@ const Womens = ({ likedItems, setLikedItems }) => {
         name: "Elegant Print Kurti",
         title: "Casual Printed Kurti with Straight Fit",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/71lSQmEASkL._AC_UY1100__lyfpf7.jpg",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750993694/52664-209_pugk9q.webp",
         price: "$50",
       },
     ],

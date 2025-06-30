@@ -12,12 +12,23 @@ const Girls = ({ likedItems, setLikedItems }) => {
   // filter ke liye
   const [openDropdown, setOpenDropdown] = useState(null);
   const navigate = useNavigate();
-  const handleLike = (section, id) => {
-    const likeKey = `${section}-${id}`;
-    setLikedItems((prev) => ({
-      ...prev,
-      [likeKey]: !prev[likeKey],
-    }));
+  const handleLike = (section, product) => {
+    const likeKey = `${section}-${product.id}`;
+    // setLikedItems((prev) => ({
+    //   ...prev,
+    //   [likeKey]: !prev[likeKey],
+    // }));
+    setLikedItems((prev) => {
+      const newLikes = { ...prev };
+
+      if (newLikes[likeKey]) {
+        delete newLikes[likeKey];
+      } else {
+        newLikes[likeKey] = product;
+      }
+
+      return newLikes;
+    });
   };
   const handleView = (product) => {
     navigate(`/Productdetails/${product.id}`, { state: { product } });
@@ -320,7 +331,7 @@ const Girls = ({ likedItems, setLikedItems }) => {
                 <div className="overlay_buttons">
                   <button
                     className="like_btn"
-                    onClick={() => handleLike("girls", product.id)}
+                    onClick={() => handleLike("girls", product)}
                   >
                     {likedItems[`girls-${product.id}`] ? (
                       <IoHeartSharp className="text-red-500 " />

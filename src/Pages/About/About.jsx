@@ -1,7 +1,9 @@
 const About = () => {
   return (
     <div>
-      <h1>dfghjk,l</h1>
+      <div className=" p-40 flex justify-center">
+        <h1 className="text-4xl">UNDER PROCESSS</h1>
+      </div>
     </div>
   );
 };
