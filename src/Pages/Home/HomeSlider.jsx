@@ -284,7 +284,7 @@ const HomeSlider = ({ likedItems, setLikedItems }) => {
               <div className="shiping_icon">
                 <img src="https://res.cloudinary.com/dqprmy5ro/image/upload/v1749828205/support-3_gycaef.png"></img>
                 <div>
-                  <p className="main_text">Noney Return</p>
+                  <p className="main_text">Money Return</p>
                   <span className="sub_text">Free shiping on all order</span>
                 </div>
               </div>

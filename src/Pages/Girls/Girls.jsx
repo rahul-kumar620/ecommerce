@@ -3,7 +3,7 @@
 import { IoEyeOutline, IoHeartOutline, IoHeartSharp } from "react-icons/io5";
 // import { RiArrowDropDownLine } from "react-icons/ri";
 import "./Girls.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -11,6 +11,8 @@ const Girls = ({ likedItems, setLikedItems }) => {
   // const [likedItems, setLikedItems] = useState({});
   // filter ke liye
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [filteredVisible, setFilteredVisible] = useState(false);
   const navigate = useNavigate();
   const handleLike = (section, product) => {
     const likeKey = `${section}-${product.id}`;
@@ -30,6 +32,37 @@ const Girls = ({ likedItems, setLikedItems }) => {
       return newLikes;
     });
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
+      if (!mobile) {
+        setFilteredVisible(true); // Desktop: filters always visible
+      }
+    };
+
+    handleResize(); // call initially
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleFilteredByClick = () => {
+    if (isMobile) {
+      setFilteredVisible(!filteredVisible);
+      setOpenDropdown(null); // reset dropdown
+    }
+  };
+
+  const toggleDropdown = (section) => {
+    setOpenDropdown(openDropdown === section ? null : section);
+  };
+
+  //  catagari section
+  //  const handleCategoryClick = (category) => {
+  //    setSelectedCategory(category.toLowerCase());
+  //  };
+
   const handleView = (product) => {
     navigate(`/Productdetails/${product.id}`, { state: { product } });
   };
@@ -37,9 +70,6 @@ const Girls = ({ likedItems, setLikedItems }) => {
   //   navigate(`/Productdetails/${id}`);
   // };
   // filter code likhe toggle ke liye
-  const toggleDropdown = (type) => {
-    setOpenDropdown(openDropdown === type ? null : type);
-  };
   const products = {
     newArrivals: [
       {
@@ -199,120 +229,115 @@ const Girls = ({ likedItems, setLikedItems }) => {
         <div className="heading-section">
           <p className="text-head">GIRLS</p>
         </div>
-        <div className="filter-section">
-          <div className="left-filter-side">
-            <p className="left-side-text">Filtered By:</p>
+        <div className="filter-section-women">
+          <div className="left-filter-side-women">
+            {/* Filtered By Label (Clickable on mobile) */}
+            <p className="left-side-text-women" onClick={handleFilteredByClick}>
+              Filtered By:
+            </p>
 
-            <div className="dropdown">
-              <p
-                className="left-side-texts"
-                onClick={() => toggleDropdown("productType")}
-              >
-                Product Type {openDropdown === "productType" ? "v" : "v"}
-              </p>
-              {openDropdown === "productType" && (
-                <div
-                  className={`dropdown-content ${
-                    openDropdown === "productType" ? "open" : ""
-                  }`}
-                >
-                  <label>
-                    <input type="checkbox" /> Shirt
-                  </label>
-                  <label>
-                    <input type="checkbox" /> Pants
-                  </label>
-                  <label>
-                    <input type="checkbox" /> Jackets
-                  </label>
+            {filteredVisible && (
+              <>
+                {/* Product Type */}
+                <div className="dropdown-women">
+                  <p
+                    className="left-side-texts-women"
+                    onClick={() => toggleDropdown("productType")}
+                  >
+                    Product Type {openDropdown === "productType" ? "▲" : "▼"}
+                  </p>
+                  {openDropdown === "productType" && (
+                    <div className="dropdown-content-women open">
+                      <label>
+                        <input type="checkbox" /> Shirt
+                      </label>
+                      <label>
+                        <input type="checkbox" /> Pants
+                      </label>
+                      <label>
+                        <input type="checkbox" /> Jackets
+                      </label>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
 
-            <div className="dropdown">
-              <p
-                className="left-side-texts"
-                onClick={() => toggleDropdown("size")}
-              >
-                Size {openDropdown === "size" ? "▲" : "▼"}
-              </p>
-              {openDropdown === "size" && (
-                <div
-                  className={`dropdown-content ${
-                    openDropdown === "size" ? "open" : ""
-                  }`}
-                >
-                  <label>
-                    <input type="checkbox" /> S
-                  </label>
-                  <label>
-                    <input type="checkbox" /> M
-                  </label>
-                  <label>
-                    <input type="checkbox" /> L
-                  </label>
-                  <label>
-                    <input type="checkbox" /> XL
-                  </label>
+                {/* Size */}
+                <div className="dropdown-women">
+                  <p
+                    className="left-side-texts-women"
+                    onClick={() => toggleDropdown("size")}
+                  >
+                    Size {openDropdown === "size" ? "▲" : "▼"}
+                  </p>
+                  {openDropdown === "size" && (
+                    <div className="dropdown-content-women open">
+                      <label>
+                        <input type="checkbox" /> S
+                      </label>
+                      <label>
+                        <input type="checkbox" /> M
+                      </label>
+                      <label>
+                        <input type="checkbox" /> L
+                      </label>
+                      <label>
+                        <input type="checkbox" /> XL
+                      </label>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
 
-            <div className="dropdown">
-              <p
-                className="left-side-texts"
-                onClick={() => toggleDropdown("color")}
-              >
-                Colour/Variant {openDropdown === "color" ? "▲" : "▼"}
-              </p>
-              {openDropdown === "color" && (
-                <div
-                  className={`dropdown-content ${
-                    openDropdown === "color" ? "open" : ""
-                  }`}
-                >
-                  <label>
-                    <input type="checkbox" /> Red
-                  </label>
-                  <label>
-                    <input type="checkbox" /> Blue
-                  </label>
-                  <label>
-                    <input type="checkbox" /> Green
-                  </label>
+                {/* Colour */}
+                <div className="dropdown-women">
+                  <p
+                    className="left-side-texts-women"
+                    onClick={() => toggleDropdown("color")}
+                  >
+                    Colour/Variant {openDropdown === "color" ? "▲" : "▼"}
+                  </p>
+                  {openDropdown === "color" && (
+                    <div className="dropdown-content-women open">
+                      <label>
+                        <input type="checkbox" /> Red
+                      </label>
+                      <label>
+                        <input type="checkbox" /> Blue
+                      </label>
+                      <label>
+                        <input type="checkbox" /> Green
+                      </label>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
 
-            <div className="dropdown">
-              <p
-                className="left-side-texts"
-                onClick={() => toggleDropdown("price")}
-              >
-                Price Range {openDropdown === "price" ? "▲" : "▼"}
-              </p>
-              {openDropdown === "price" && (
-                <div
-                  className={`dropdown-content ${
-                    openDropdown === "price" ? "open" : ""
-                  }`}
-                >
-                  <label>
-                    <input type="checkbox" /> ₹0 - ₹500
-                  </label>
-                  <label>
-                    <input type="checkbox" /> ₹500 - ₹1000
-                  </label>
-                  <label>
-                    <input type="checkbox" /> ₹1000+
-                  </label>
+                {/* Price */}
+                <div className="dropdown-women">
+                  <p
+                    className="left-side-texts-women"
+                    onClick={() => toggleDropdown("price")}
+                  >
+                    Price Range {openDropdown === "price" ? "▲" : "▼"}
+                  </p>
+                  {openDropdown === "price" && (
+                    <div className="dropdown-content-women open">
+                      <label>
+                        <input type="checkbox" /> ₹0 - ₹500
+                      </label>
+                      <label>
+                        <input type="checkbox" /> ₹500 - ₹1000
+                      </label>
+                      <label>
+                        <input type="checkbox" /> ₹1000+
+                      </label>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
+              </>
+            )}
           </div>
 
-          <div className="right-side-sorted">
-            <button className="right-side-sorteds">
+          <div className="right-side-sorted-women">
+            <button className="right-side-sorteds-women">
               <span>Sorted by</span>
               <p>Popularity</p>
             </button>

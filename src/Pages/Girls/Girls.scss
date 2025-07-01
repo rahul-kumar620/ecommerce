@@ -13,15 +13,16 @@
       line-height: 28px;
     }
   }
-  & .filter-section {
+  & .filter-section-women {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 16px;
-    & .left-filter-side {
+    & .left-filter-side-women {
       display: flex;
       gap: 20px;
-      & .left-side-text {
+      & .left-side-text-women {
+        display: block;
         font-size: 16px;
         font-weight: 500;
         color: rgb(173, 171, 171);
@@ -32,10 +33,12 @@
         font-weight: 400;
         cursor: pointer;
       }
-      & .dropdown {
+      & .dropdown-women {
+        display: none;
+        display: flex;
         flex-direction: column;
         position: relative;
-        & .dropdown-content {
+        & .dropdown-content-women {
           position: absolute;
           display: flex;
           flex-direction: column;
@@ -47,20 +50,19 @@
           width: 200px;
           z-index: 999;
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-          & .open {
+          & .open-women {
             display: flex;
           }
         }
       }
     }
-    & .right-side-sorteds {
+    & .right-side-sorteds-women {
       display: flex;
       gap: 10px;
       font-size: 16px;
       font-weight: 400;
     }
   }
-
   .main-girls-section {
     display: flex;
     flex-wrap: wrap;
@@ -182,15 +184,16 @@
         line-height: 28px;
       }
     }
-    & .filter-section {
+    & .filter-section-women {
       display: flex;
       justify-content: space-around;
       align-items: center;
       margin-bottom: 16px;
-      & .left-filter-side {
+      & .left-filter-side-women {
         display: flex;
         gap: 20px;
-        & .left-side-text {
+        & .left-side-text-women {
+          display: block;
           font-size: 16px;
           font-weight: 500;
           color: rgb(173, 171, 171);
@@ -201,12 +204,12 @@
           font-weight: 400;
           cursor: pointer;
         }
-        & .dropdown {
-          display: none !important;
+        & .dropdown-women {
+          display: none;
           display: flex;
           flex-direction: column;
           position: relative;
-          & .dropdown-content {
+          & .dropdown-content-women {
             position: absolute;
             display: flex;
             flex-direction: column;
@@ -218,13 +221,13 @@
             width: 200px;
             z-index: 999;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            & .dropdown-content.open {
-              display: block !important;
+            & .open-women {
+              display: flex;
             }
           }
         }
       }
-      & .right-side-sorteds {
+      & .right-side-sorteds-women {
         display: flex;
         gap: 10px;
         font-size: 16px;
@@ -332,6 +335,82 @@
       color: #ff5722;
       text-decoration: line-through;
       font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 776px) {
+  .main-container-girls {
+    padding-top: 110px;
+    padding-left: 24px;
+    padding-right: 24px;
+    & .heading-section {
+      display: flex;
+      justify-content: center;
+
+      padding-bottom: 24px;
+      & .text-head {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 28px;
+      }
+    }
+    & .filter-section-women {
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: nowrap;
+      & .left-filter-side-women {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & .left-side-text-women {
+          display: flex;
+          flex-direction: column;
+          font-size: 16px;
+          font-weight: 500;
+          color: rgb(173, 171, 171);
+          cursor: pointer;
+        }
+        & .left-side-texts {
+          font-size: 17px;
+          font-weight: 400;
+          cursor: pointer;
+        }
+        & .dropdown-women {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          & .dropdown-content-women {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            top: 100%;
+            left: 0;
+            background: white;
+            width: 200px;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            & .open-women {
+              display: flex;
+            }
+          }
+        }
+      }
+      & .right-side-sorteds-women {
+        position: absolute;
+        top: -10px;
+        right: 0;
+        left: 150px;
+        background-color: white;
+        z-index: 10;
+        padding: 10px;
+        font-size: 15px;
+      }
     }
   }
 }
