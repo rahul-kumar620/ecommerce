@@ -11,6 +11,9 @@
   background-color: antiquewhite;
   width: 100%;
 }
+.list_items.active {
+  color: rgb(90, 89, 89);
+}
 .sub_logo_ancher {
   display: flex;
   align-items: center;

@@ -14,7 +14,7 @@ const Mens = () => {
   // const [selectedSizes, setSelectedSizes] = useState([]);
   // const [selectedColors, setSelectedColors] = useState([]);
 
-  const API = "https://fakestoreapi.com/products/category/women's clothing";
+  const API = "http://localhost:8080/product";
 
   const getProductData = async () => {
     try {
@@ -332,13 +332,13 @@ const Mens = () => {
                 <div className="product-card" key={item.id}>
                   <div className="image-section-all-product">
                     <img
-                      src={item.image}
-                      alt={item.title}
+                      src={item.imageUrls}
+                      alt={item.name}
                       className="product-main-image"
                     />
                   </div>
                   <div className="product-all-text">
-                    <p className="product-title-mens">{item.title}</p>
+                    <p className="product-title-mens">{item.name}</p>
                     <p className="product-price-mens">₹{item.price}</p>
                   </div>
                 </div>

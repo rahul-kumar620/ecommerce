@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 
 //  css
 import "./ProductDetails.scss";
+import PropTypes from "prop-types";
 // const products = {
 //   newArrivals: [
 //     {
@@ -144,7 +145,7 @@ import "./ProductDetails.scss";
 
 const sizes = ["S", "M", "L", "XL"];
 
-const ProductDetails = () => {
+const ProductDetails = ({ cartItems, setCartItems }) => {
   // const { id } = useParams();
   // const allProducts = [
   //   ...products.newArrivals,
@@ -154,7 +155,7 @@ const ProductDetails = () => {
   // const product =
   //   passedProduct || allProducts.find((p) => p.id === parseInt(id));
 
-  const [selectedSize, setSelectedSize] = useState(sizes[0]);
+  const [selectedSize, setSelectedSize] = useState("S");
   const [quantity, setQuantity] = useState(1);
   const location = useLocation();
   const { product: passedProduct } = location.state || {};
@@ -165,6 +166,14 @@ const ProductDetails = () => {
   }
 
   const handleAddToCart = () => {
+    const newCartItem = {
+      ...product,
+      size: selectedSize,
+      quantity,
+      cartId: Date.now(),
+    };
+
+    setCartItems([...cartItems, newCartItem]);
     alert(`Added ${quantity} of size ${selectedSize} to cart!`);
   };
 
@@ -224,7 +233,7 @@ const ProductDetails = () => {
           </div>
 
           <div className="buttons">
-            <button onClick={handleAddToCart}>Add to Cart</button>
+            <button onClick={() => handleAddToCart}>Add to Cart</button>
             <button>Buy Now</button>
           </div>
 
@@ -241,6 +250,11 @@ const ProductDetails = () => {
       </div>
     </div>
   );
+};
+
+ProductDetails.propTypes = {
+  cartItems: PropTypes.object.isRequired,
+  setCartItems: PropTypes.func.isRequired,
 };
 
 export default ProductDetails;

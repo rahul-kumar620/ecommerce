@@ -20,14 +20,23 @@ function App() {
     return storedLikes ? JSON.parse(storedLikes) : {};
   });
 
+  const [cartItems, setCartItems] = useState(() => {
+    const storedCart = localStorage.getItem("cartItems");
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
+
   useEffect(() => {
     localStorage.setItem("likedItems", JSON.stringify(likedItems));
   }, [likedItems]);
 
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
+
   return (
     <Router basename="/ecommerce">
       {/* <Header /> */}
-      <Headers likedItems={likedItems} />
+      <Headers likedItems={likedItems} cartItems={cartItems} />
       <Routes>
         <Route
           path="/"
@@ -51,7 +60,12 @@ function App() {
           }
         />
         <Route path="/login" element={<Login />} />
-        <Route path="/Productdetails/:id" element={<ProductDetails />} />
+        <Route
+          path="/Productdetails/:id"
+          element={
+            <ProductDetails cartItems={cartItems} setCartItems={setCartItems} />
+          }
+        />
         <Route
           path="/favorites"
           element={<Favorites likedItems={likedItems} />}

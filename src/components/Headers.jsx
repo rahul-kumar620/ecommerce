@@ -3,7 +3,7 @@ import "./Headers.css";
 import { CiUser, CiSearch } from "react-icons/ci";
 import { GiShoppingCart } from "react-icons/gi";
 import { FaBars } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const Headers = ({ likedItems }) => {
@@ -39,41 +39,51 @@ const Headers = ({ likedItems }) => {
 
         {/* Navigation menu */}
         <div className={`list ${isMenuOpen ? "open" : "closed"}`}>
-          <Link
+          <NavLink
             to="/"
-            className="list_items"
+            className={({ isActive }) =>
+              isActive ? "list_items active" : "list_items"
+            }
             onClick={() => setIsMenuOpen(false)}
           >
             Home
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/about"
-            className="list_items"
+            className={({ isActive }) =>
+              isActive ? "list_items active" : "list_items"
+            }
             onClick={() => setIsMenuOpen(false)}
           >
             About
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/mens"
-            className="list_items"
+            className={({ isActive }) =>
+              isActive ? "list_items active" : "list_items"
+            }
             onClick={() => setIsMenuOpen(false)}
           >
             Men
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/womens"
-            className="list_items"
+            className={({ isActive }) =>
+              isActive ? "list_items active" : "list_items"
+            }
             onClick={() => setIsMenuOpen(false)}
           >
             Women
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/girls"
-            className="list_items"
+            className={({ isActive }) =>
+              isActive ? "list_items active" : "list_items"
+            }
             onClick={() => setIsMenuOpen(false)}
           >
             Girl
-          </Link>
+          </NavLink>
         </div>
       </div>
 
