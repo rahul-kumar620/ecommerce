@@ -19,14 +19,12 @@ const About = () => {
   const fetchProducts = async () => {
     try {
       const res = await axios.get("http://localhost:8080/product");
-      const cleaned = res.data.map((item) => ({
+      const cleaned = res.data.map((item, index) => ({
         ...item,
         _id:
-          typeof item.id === "object" && item.id.timestamp
-            ? item.id.timestamp.toString()
-            : typeof item.id === "string"
-            ? item.id
-            : "",
+          item._id?.toString?.() ||
+          item.id?.toString?.() ||
+          `fallback-id-${index}`,
       }));
       setProducts(cleaned);
     } catch (err) {
@@ -52,14 +50,14 @@ const About = () => {
 
   const handleAdd = async () => {
     try {
-      const newP = {
+      const newProduct = {
         name: form.name,
         description: form.description,
         price: parseFloat(form.price),
         category: form.category,
         imageUrls: [form.imageUrls],
       };
-      await axios.post("http://localhost:8080/product", newP);
+      await axios.post("http://localhost:8080/product", newProduct);
       alert("Product added!");
       setForm({
         name: "",
@@ -81,13 +79,13 @@ const About = () => {
       description: product.description || "",
       price: product.price || "",
       category: product.category || "",
-      imageUrls: product.imageUrls[0] || "",
+      imageUrls: product.imageUrls?.[0] || "",
     });
   };
 
   const handleUpdate = async () => {
     if (!editingProduct) {
-      console.error("Cannot update: invalid editingProduct", editingProduct);
+      console.error("No product selected for editing");
       return;
     }
     try {
@@ -123,9 +121,7 @@ const About = () => {
 
     try {
       const res = await axios.post("http://localhost:8080/upload", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
+        headers: { "Content-Type": "multipart/form-data" },
       });
       const imageUrl = res.data.url;
       setForm((prev) => ({ ...prev, imageUrls: imageUrl }));
@@ -249,7 +245,7 @@ const About = () => {
               <p>
                 <strong>Category:</strong> {product.category}
               </p>
-              {product.imageUrls && product.imageUrls[0] && (
+              {product.imageUrls?.[0] && (
                 <img
                   src={product.imageUrls[0]}
                   alt={product.name}
