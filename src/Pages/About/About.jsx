@@ -55,7 +55,7 @@ const About = () => {
         description: form.description,
         price: parseFloat(form.price),
         category: form.category,
-        imageUrls: [form.imageUrls],
+        imageUrls: [form.imageUrls], // image URL array mein bhej rahe hain
       };
       await axios.post("http://localhost:8080/product", newProduct);
       alert("Product added!");
@@ -94,7 +94,7 @@ const About = () => {
         description: form.description,
         price: parseFloat(form.price),
         category: form.category,
-        imageUrls: [form.imageUrls],
+        imageUrls: [form.imageUrls], // same yahan bhi URL array mein
       };
       await axios.put(
         `http://localhost:8080/product/id/${editingProduct}`,
@@ -110,24 +110,6 @@ const About = () => {
 
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleImageUpload = async (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const formData = new FormData();
-    formData.append("image", file);
-
-    try {
-      const res = await axios.post("http://localhost:8080/upload", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
-      const imageUrl = res.data.url;
-      setForm((prev) => ({ ...prev, imageUrls: imageUrl }));
-    } catch (err) {
-      console.error("Image upload failed:", err);
-    }
   };
 
   return (
@@ -168,7 +150,12 @@ const About = () => {
           onChange={handleChange}
           placeholder="Category"
         />
-        <input type="file" accept="image/*" onChange={handleImageUpload} />
+        <input
+          name="imageUrls"
+          value={form.imageUrls}
+          onChange={handleChange}
+          placeholder="Image URL"
+        />
         <br />
         {form.imageUrls && (
           <img
@@ -219,9 +206,10 @@ const About = () => {
                 placeholder="Category"
               />
               <input
-                type="file"
-                accept="image/*"
-                onChange={handleImageUpload}
+                name="imageUrls"
+                value={form.imageUrls}
+                onChange={handleChange}
+                placeholder="Image URL"
               />
               <br />
               {form.imageUrls && (
