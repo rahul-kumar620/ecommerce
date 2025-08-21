@@ -7,36 +7,54 @@ import "swiper/css/autoplay";
 import "swiper/css";
 import "swiper/css/pagination";
 
+// new change start
+// ✨ NEW IMPORT
+import { useDispatch, useSelector } from "react-redux";
+import { toggleLike } from "../../Redux/slices/LikeSlice";
+
+// new change end
+
 // icon section
 
 import { IoStarOutline } from "react-icons/io5";
 import { IoHeartOutline, IoHeartSharp, IoEyeOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 
-const HomeSlider = ({ likedItems, setLikedItems }) => {
+const HomeSlider = () => {
   const [itemsPerRow, setItemsPerRow] = useState(4);
   const [selectedCategory, setSelectedCategory] = useState("newArrivals");
 
+  const dispatch = useDispatch();
+  const likedItems = useSelector((state) => state.liked);
+
   const navigate = useNavigate();
 
+  // const handleLike = (section, product) => {
+  //   const likeKey = `${section}-${product.id}`;
+  //   // setLikedItems((prev) => ({ ...prev, [likeKey]: !prev[likeKey] }));
+  //   setLikedItems((prev) => {
+  //     const newLikes = { ...prev };
+
+  //     if (newLikes[likeKey]) {
+  //       delete newLikes[likeKey];
+  //     } else {
+  //       newLikes[likeKey] = product;
+  //     }
+
+  //     return newLikes;
+  //   });
+  // };
+
+  //  new change redux start
+
+  // 🆕 Redux se handle kare like/unlike
   const handleLike = (section, product) => {
     const likeKey = `${section}-${product.id}`;
-    // setLikedItems((prev) => ({ ...prev, [likeKey]: !prev[likeKey] }));
-    setLikedItems((prev) => {
-      const newLikes = { ...prev };
-
-      if (newLikes[likeKey]) {
-        delete newLikes[likeKey];
-      } else {
-        newLikes[likeKey] = product;
-      }
-
-      return newLikes;
-    });
+    dispatch(toggleLike({ key: likeKey, product }));
   };
 
+  // new change redux end
   const handleView = (product) => {
     navigate(`/Productdetails/${product.id}`, { state: { product } });
   };
@@ -440,11 +458,6 @@ const HomeSlider = ({ likedItems, setLikedItems }) => {
       </div>
     </>
   );
-};
-
-HomeSlider.propTypes = {
-  likedItems: PropTypes.object.isRequired,
-  setLikedItems: PropTypes.func.isRequired,
 };
 
 export default HomeSlider;

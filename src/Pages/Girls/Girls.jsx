@@ -5,33 +5,49 @@ import { IoEyeOutline, IoHeartOutline, IoHeartSharp } from "react-icons/io5";
 import "./Girls.scss";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import PropTypes from "prop-types";
 
-const Girls = ({ likedItems, setLikedItems }) => {
+// new change start
+// ✨ NEW IMPORT
+import { useDispatch, useSelector } from "react-redux";
+import { toggleLike } from "../../Redux/slices/LikeSlice";
+
+// new change end
+
+const Girls = () => {
   // const [likedItems, setLikedItems] = useState({});
   // filter ke liye
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [filteredVisible, setFilteredVisible] = useState(false);
+
+  const dispatch = useDispatch();
+  const likedItems = useSelector((state) => state.liked);
   const navigate = useNavigate();
+  // const handleLike = (section, product) => {
+  //   const likeKey = `${section}-${product.id}`;
+
+  //   setLikedItems((prev) => {
+  //     const newLikes = { ...prev };
+
+  //     if (newLikes[likeKey]) {
+  //       delete newLikes[likeKey];
+  //     } else {
+  //       newLikes[likeKey] = product;
+  //     }
+
+  //     return newLikes;
+  //   });
+  // };
+
+  //  new change redux start
+
+  // 🆕 Redux se handle kare like/unlike
   const handleLike = (section, product) => {
     const likeKey = `${section}-${product.id}`;
-    // setLikedItems((prev) => ({
-    //   ...prev,
-    //   [likeKey]: !prev[likeKey],
-    // }));
-    setLikedItems((prev) => {
-      const newLikes = { ...prev };
-
-      if (newLikes[likeKey]) {
-        delete newLikes[likeKey];
-      } else {
-        newLikes[likeKey] = product;
-      }
-
-      return newLikes;
-    });
+    dispatch(toggleLike({ key: likeKey, product }));
   };
+
+  // new change redux end
 
   useEffect(() => {
     const handleResize = () => {
@@ -163,7 +179,8 @@ const Girls = ({ likedItems, setLikedItems }) => {
         title: "Embroidered Anarkali Kurti for Festive Occasions",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-neha-mishra-1851906907-28512776_dz74dx.webp",
-        price: "$35",
+        price: "1300",
+        span: "1000",
       },
       {
         id: 11,
@@ -171,7 +188,8 @@ const Girls = ({ likedItems, setLikedItems }) => {
         title: "Trendy Denim Kurti with Button Front",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/71lSQmEASkL._AC_UY1100__lyfpf7.jpg",
-        price: "$29",
+        price: "1200",
+        span: "900",
       },
       {
         id: 12,
@@ -179,7 +197,8 @@ const Girls = ({ likedItems, setLikedItems }) => {
         title: "Casual Printed Kurti with Straight Fit",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/71lSQmEASkL._AC_UY1100__lyfpf7.jpg",
-        price: "$50",
+        price: "500",
+        span: "300",
       },
     ],
     saleItems: [
@@ -189,7 +208,8 @@ const Girls = ({ likedItems, setLikedItems }) => {
         title: "Basic Cotton Kurti for Everyday Wear",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
-        price: "$10",
+        price: "500",
+        span: "300",
       },
       {
         id: 14,
@@ -197,7 +217,8 @@ const Girls = ({ likedItems, setLikedItems }) => {
         title: "Kurti with Water-Repellent Finish for Outdoor Use",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
-        price: "$18",
+        price: "500",
+        span: "300",
       },
       {
         id: 15,
@@ -205,7 +226,8 @@ const Girls = ({ likedItems, setLikedItems }) => {
         title: "Modern Kurti with Stylish Graphic Prints",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
-        price: "$12",
+        price: "500",
+        span: "300",
       },
       {
         id: 16,
@@ -213,7 +235,8 @@ const Girls = ({ likedItems, setLikedItems }) => {
         title: "Breathable Cotton Kurti for Casual Days",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
-        price: "$22",
+        price: "500",
+        span: "300",
       },
     ],
   };
@@ -249,10 +272,10 @@ const Girls = ({ likedItems, setLikedItems }) => {
                   {openDropdown === "productType" && (
                     <div className="dropdown-content-women open">
                       <label>
-                        <input type="checkbox" /> Shirt
+                        <input type="checkbox" /> Kurti
                       </label>
                       <label>
-                        <input type="checkbox" /> Pants
+                        <input type="checkbox" /> Jeans Top
                       </label>
                       <label>
                         <input type="checkbox" /> Jackets
@@ -396,8 +419,5 @@ const Girls = ({ likedItems, setLikedItems }) => {
     </>
   );
 };
-Girls.propTypes = {
-  likedItems: PropTypes.object.isRequired,
-  setLikedItems: PropTypes.func.isRequired,
-};
+
 export default Girls;

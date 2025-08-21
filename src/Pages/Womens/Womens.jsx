@@ -5,38 +5,36 @@ import "swiper/css";
 import "swiper/css/pagination";
 // import "swiper/css/autoplay";
 
+// new change start
+// ✨ NEW IMPORT
+import { useDispatch, useSelector } from "react-redux";
+import { toggleLike } from "../../Redux/slices/LikeSlice";
+
+// new change end
+
 //  scss
 import "./Womens.scss";
 import { useEffect, useState } from "react";
 import { IoEyeOutline, IoHeartOutline, IoHeartSharp } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-import PropTypes from "prop-types";
 
-const Womens = ({ likedItems, setLikedItems }) => {
+const Womens = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [filteredVisible, setFilteredVisible] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("banarshi");
 
+  const dispatch = useDispatch();
+  const likedItems = useSelector((state) => state.liked);
+
   const navigate = useNavigate();
+  //  new change redux start
+  //Redux se handle kare like/unlike
   const handleLike = (section, product) => {
     const likeKey = `${section}-${product.id}`;
-    // setLikedItems((prev) => ({
-    //   ...prev,
-    //   [likeKey]: !prev[likeKey],
-    // }));
-    setLikedItems((prev) => {
-      const newLikes = { ...prev };
-
-      if (newLikes[likeKey]) {
-        delete newLikes[likeKey];
-      } else {
-        newLikes[likeKey] = product;
-      }
-
-      return newLikes;
-    });
+    dispatch(toggleLike({ key: likeKey, product }));
   };
+  // new change redux end
 
   const handleView = (product) => {
     navigate(`/Productdetails/${product.id}`, { state: { product } });
@@ -488,11 +486,6 @@ const Womens = ({ likedItems, setLikedItems }) => {
       </div>
     </div>
   );
-};
-
-Womens.propTypes = {
-  likedItems: PropTypes.object.isRequired,
-  setLikedItems: PropTypes.func.isRequired,
 };
 
 export default Womens;

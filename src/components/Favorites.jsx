@@ -1,12 +1,12 @@
-// Wishlist.jsx
-import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
-// scss
 import "./Favorites.scss";
 
-const Favorites = ({ likedItems }) => {
+const Favorites = () => {
   const navigate = useNavigate();
+
+  // ✅ Get likedItems from Redux store
+  const likedItems = useSelector((state) => state.liked || {});
   const likedArray = Object.values(likedItems);
 
   return (
@@ -16,8 +16,8 @@ const Favorites = ({ likedItems }) => {
         <p>No items in your wishlist.</p>
       ) : (
         <div className="wishlist-grid">
-          {likedArray.map((item) => (
-            <div key={item.id} className="wishlist-item">
+          {likedArray.map((item, index) => (
+            <div key={`${item.id}-${index}`} className="wishlist-item">
               <img src={item.image} alt={item.title} />
               <p>{item.name}</p>
               <p>₹{item.price}</p>
@@ -36,10 +36,6 @@ const Favorites = ({ likedItems }) => {
       )}
     </div>
   );
-};
-
-Favorites.propTypes = {
-  likedItems: PropTypes.object.isRequired,
 };
 
 export default Favorites;

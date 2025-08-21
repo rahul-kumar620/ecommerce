@@ -1,22 +1,31 @@
 import { useState } from "react";
 import "./Headers.css";
-import { CiUser, CiSearch } from "react-icons/ci";
+import { CiUser } from "react-icons/ci";
+import { FcLikePlaceholder } from "react-icons/fc";
 import { GiShoppingCart } from "react-icons/gi";
 import { FaBars } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
-import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
 
-const Headers = ({ likedItems }) => {
+const Headers = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false); // For mobile menu toggle
 
   const handleLoginClick = () => {
     navigate("/login");
   };
-  const likeCount = Object.values(likedItems).filter(Boolean).length;
+  // const likeCount = Object.values(likedItems).filter(Boolean).length;
+  const likedItems = useSelector((state) => state.liked);
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  const likeCount = Object.keys(likedItems).length;
+  const cartCount = cartItems.length;
 
   const handleFavorites = () => {
     navigate("/favorites");
+  };
+
+  const handleCartItem = () => {
+    navigate("/cartpages");
   };
 
   return (
@@ -89,17 +98,21 @@ const Headers = ({ likedItems }) => {
 
       <div className="icon_section">
         <CiUser className="header_icon" onClick={handleLoginClick} />
-        <CiSearch className="header_icon" />
         <div>
-          <GiShoppingCart onClick={handleFavorites} className="header_icon" />
-          <span className="cart_badge">{likeCount}</span>
+          <GiShoppingCart onClick={handleCartItem} className="header_icon" />
+          {cartCount > 0 && <span className="cart_badgeddd">{cartCount}</span>}
+        </div>
+
+        <div>
+          <FcLikePlaceholder
+            onClick={handleFavorites}
+            className="header_icon"
+          />
+          {likeCount > 0 && <span className="cart_badge">{likeCount}</span>}
         </div>
       </div>
     </div>
   );
-};
-Headers.propTypes = {
-  likedItems: PropTypes.object.isRequired,
 };
 
 export default Headers;

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 //  css
 import "./ProductDetails.scss";
-import PropTypes from "prop-types";
 // const products = {
 //   newArrivals: [
 //     {
@@ -145,37 +145,28 @@ import PropTypes from "prop-types";
 
 const sizes = ["S", "M", "L", "XL"];
 
-const ProductDetails = ({ cartItems, setCartItems }) => {
-  // const { id } = useParams();
-  // const allProducts = [
-  //   ...products.newArrivals,
-  //   ...products.bestSellers,
-  //   ...products.saleItems,
-  // ];
-  // const product =
-  //   passedProduct || allProducts.find((p) => p.id === parseInt(id));
-
+const ProductDetails = () => {
   const [selectedSize, setSelectedSize] = useState("S");
   const [quantity, setQuantity] = useState(1);
   const location = useLocation();
   const { product: passedProduct } = location.state || {};
 
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    const cartItem = {
+      ...product,
+      quantity,
+      selectedSize,
+    };
+
+    dispatch({ type: "ADD_TO_CART", payload: cartItem });
+  };
+
   const product = passedProduct;
   if (!product) {
     return <h2>Product not found</h2>;
   }
-
-  const handleAddToCart = () => {
-    const newCartItem = {
-      ...product,
-      size: selectedSize,
-      quantity,
-      cartId: Date.now(),
-    };
-
-    setCartItems([...cartItems, newCartItem]);
-    alert(`Added ${quantity} of size ${selectedSize} to cart!`);
-  };
 
   return (
     <div className="product-details">
@@ -233,7 +224,7 @@ const ProductDetails = ({ cartItems, setCartItems }) => {
           </div>
 
           <div className="buttons">
-            <button onClick={() => handleAddToCart}>Add to Cart</button>
+            <button onClick={handleAddToCart}>Add to Cart</button>
             <button>Buy Now</button>
           </div>
 
@@ -250,11 +241,6 @@ const ProductDetails = ({ cartItems, setCartItems }) => {
       </div>
     </div>
   );
-};
-
-ProductDetails.propTypes = {
-  cartItems: PropTypes.object.isRequired,
-  setCartItems: PropTypes.func.isRequired,
 };
 
 export default ProductDetails;

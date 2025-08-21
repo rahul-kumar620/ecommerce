@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   align-items: center;
-  background-color: antiquewhite;
+  background-color: rgb(244, 237, 229);
   width: 100%;
 }
 .list_items.active {
@@ -64,6 +64,18 @@
   position: absolute;
   top: 10px;
   right: 55px;
+  background-color: rgb(243, 203, 150);
+  color: black;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  z-index: 10;
+}
+.cart_badgeddd {
+  position: absolute;
+  top: 10px;
+  right: 95px;
   background-color: rgb(243, 203, 150);
   color: black;
   font-size: 12px;
@@ -137,6 +149,18 @@
     position: absolute;
     top: 12px;
     right: 30px;
+    background-color: rgb(243, 203, 150);
+    color: black;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+    z-index: 10;
+  }
+  .cart_badgeddd {
+    position: absolute;
+    top: 10px;
+    right: 70px;
     background-color: rgb(243, 203, 150);
     color: black;
     font-size: 12px;
@@ -236,6 +260,18 @@
     position: absolute;
     top: -10px;
     right: 15px;
+    background-color: rgb(243, 203, 150);
+    color: black;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+    z-index: 10;
+  }
+  .cart_badgeddd {
+    position: absolute;
+    top: -13px;
+    right: 55px;
     background-color: rgb(243, 203, 150);
     color: black;
     font-size: 12px;
