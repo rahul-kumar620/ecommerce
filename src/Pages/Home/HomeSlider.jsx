@@ -436,7 +436,7 @@ const HomeSlider = () => {
                     A Curated Celebration of Grace and Glamour
                   </span>
                   <p className="right-side-all-text">
-                    where tradition meets contemporary style. Discover a curated
+                    Where tradition meets contemporary style. Discover a new and curated
                     range of
                     <br /> sarees that blend the richness of Indian heritage
                     with the flair of modern
