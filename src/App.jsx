@@ -51,6 +51,7 @@ import Login from "./Pages/Login/Login";
 import ProductDetails from "./components/ProductDetails";
 import Favorites from "./components/Favorites";
 import CartPages from "./components/CartPages";
+import Productmanager from "./components/Productmanager";
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
             <Route path="/Productdetails/:id" element={<ProductDetails />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/cartpages" element={<CartPages />} />
+            <Route path="/productmanager" element={<Productmanager />} />
           </Routes>
         </main>
         <Footer />

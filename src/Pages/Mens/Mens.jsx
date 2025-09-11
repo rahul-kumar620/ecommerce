@@ -15,9 +15,9 @@ const Mens = () => {
   // filter karege type ke anusar se uske liye ye hai
   const [selectedPrices, setSelectedPrices] = useState([]);
   const [selectedTypes, setSelectedTypes] = useState([]);
-  // const [selectedSizes, setSelectedSizes] = useState([]);
-  // const [selectedColors, setSelectedColors] = useState([]);
+  const [selectedSize, setSelectedSize] = useState([]);
 
+  // ye redux
   const dispatch = useDispatch();
   const likedItems = useSelector((state) => state.liked);
   const navigate = useNavigate();
@@ -66,10 +66,11 @@ const Mens = () => {
         title: "Women’s Casual Straight Kurti with Side Slits",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031739/EXCG00014CARBON_1_ciljac.webp",
-        price: "₹500",
+        price: "₹200",
         span: "₹150",
         inStock: true,
         type: "T-Shirt",
+        size: ["S"],
       },
       {
         id: 2,
@@ -81,6 +82,7 @@ const Mens = () => {
         span: "₹250",
         inStock: false,
         type: "Shirt",
+        size: ["M"],
       },
       {
         id: 3,
@@ -91,6 +93,7 @@ const Mens = () => {
         price: "₹600",
         span: "₹350",
         type: "Jeanse",
+        size: ["L"],
       },
       {
         id: 4,
@@ -100,6 +103,8 @@ const Mens = () => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031848/MFL00019MOUNTAIN_1_rlzvpz.webp",
         price: "₹700",
         span: "₹300",
+        type: "Jeanse",
+        size: ["XL"],
       },
       {
         id: 5,
@@ -109,6 +114,8 @@ const Mens = () => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031866/SMCH00003EBONY_1_vuewpe.webp",
         price: "₹400",
         span: "₹350",
+        type: "Shirt",
+        size: ["L"],
       },
       {
         id: 6,
@@ -118,6 +125,8 @@ const Mens = () => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031848/MFL00019MOUNTAIN_1_rlzvpz.webp",
         price: "₹600",
         span: "₹500",
+        type: "Jeanse",
+        size: ["L"],
       },
       {
         id: 7,
@@ -127,6 +136,8 @@ const Mens = () => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031868/SMLW00002BEIGE_1_lavn27.webp",
         price: "₹500",
         span: "₹400",
+        type: "Jeanse",
+        size: ["XL"],
       },
       {
         id: 8,
@@ -136,6 +147,8 @@ const Mens = () => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031871/SMLW00004DRYGRASS_1_ff03ed69-2678-4728-a04c-c336e9a2d4e4_x0dnkp.webp",
         price: "₹600",
         span: "₹400",
+        type: "Jeanse",
+        size: ["M"],
       },
     ],
     tshirt: [
@@ -147,6 +160,8 @@ const Mens = () => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031875/MSK00130ASPENGREEN_1_rffuop.webp",
         price: "₹500",
         span: "₹400",
+        type: "Shirt",
+        size: ["L"],
       },
       {
         id: 10,
@@ -156,6 +171,8 @@ const Mens = () => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1751524927/bblobmsjbxnkphukd0mx_375x350_crop_center_x4cdcl.webp",
         price: "₹500",
         span: "₹400",
+        type: "T-Shirt",
+        size: ["M"],
       },
       {
         id: 11,
@@ -165,6 +182,8 @@ const Mens = () => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1751524927/bblobmsjbxnkphukd0mx_375x350_crop_center_x4cdcl.webp",
         price: "₹600",
         span: "₹400",
+        type: "Jeanse",
+        size: ["L"],
       },
       {
         id: 12,
@@ -174,6 +193,8 @@ const Mens = () => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1751524927/bblobmsjbxnkphukd0mx_375x350_crop_center_x4cdcl.webp",
         price: "₹500",
         span: "₹450",
+        type: "Jeanse",
+        size: ["M"],
       },
     ],
     jeanse: [
@@ -185,6 +206,8 @@ const Mens = () => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1751524927/bblobmsjbxnkphukd0mx_375x350_crop_center_x4cdcl.webp",
         price: "₹1000",
         span: "₹900",
+        type: "Jeanse",
+        size: ["S"],
       },
       {
         id: 14,
@@ -194,6 +217,8 @@ const Mens = () => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1751524927/bblobmsjbxnkphukd0mx_375x350_crop_center_x4cdcl.webp",
         price: "₹1100",
         span: "₹1000",
+        type: "Jeanse",
+        size: ["L"],
       },
       {
         id: 15,
@@ -203,6 +228,8 @@ const Mens = () => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1751524927/bblobmsjbxnkphukd0mx_375x350_crop_center_x4cdcl.webp",
         price: "₹1300",
         span: "₹1200",
+        type: "Jeanse",
+        size: ["L"],
       },
       {
         id: 16,
@@ -212,6 +239,8 @@ const Mens = () => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1751524927/bblobmsjbxnkphukd0mx_375x350_crop_center_x4cdcl.webp",
         price: "₹900",
         span: "₹750",
+        type: "Jeanse",
+        size: ["M"],
       },
     ],
   };
@@ -224,28 +253,55 @@ const Mens = () => {
 
   // ye price range hai
   const priceRanges = [
-    { label: "₹0 - ₹500", min: 0, max: 500 },
-    { label: "₹500 - ₹1000", min: 500, max: 1000 },
+    { label: "₹0 - ₹300", min: 0, max: 300 },
+    { label: "₹400 - ₹600", min: 400, max: 600 },
+    { label: "₹700 - ₹1000", min: 700, max: 1000 },
     { label: "₹1000+", min: 1000, max: Infinity },
   ];
 
   // ham catagari ke function start kar rahe hai
-
   const handleBoysCatagory = (boyscatogory) => {
     setSelectedCategory(boyscatogory.toLowerCase());
+    setSelectedTypes([]);
+    setSelectedPrices([]);
+    setSelectedSize([]);
   };
 
   //  Catagery section
-
   const categoryProducts =
     selectedCategory == "all"
       ? allMensproduct
       : AllmensClothes[selectedCategory] || [];
 
-  // ab ham filter karenge jaise ki shirt tshirt ke liye
-  const typedFilteredProducts = categoryProducts.filter((product) => {
-    if (selectedTypes.length === 0) return true;
-    return selectedTypes.includes(product.type);
+  // filtered product list with type + price filters combined kar rahe hai
+  const finalFilteredProducts = categoryProducts.filter((product) => {
+    const numericPrice = parseInt(product.price.replace(/[₹,]/g, ""));
+
+    // Type Filter
+    if (selectedTypes.length > 0 && !selectedTypes.includes(product.type)) {
+      return false;
+    }
+
+    // Price Filter
+    if (
+      selectedPrices.length > 0 &&
+      !selectedPrices.some((rangeLabel) => {
+        const range = priceRanges.find((r) => r.label === rangeLabel);
+        return range && numericPrice >= range.min && numericPrice <= range.max;
+      })
+    ) {
+      return false;
+    }
+
+    // size filter
+    if (
+      selectedSize.length > 0 &&
+      (!product.size ||
+        !selectedSize.some((size) => product.size.includes(size)))
+    ) {
+      return false;
+    }
+    return true;
   });
 
   return (
@@ -369,16 +425,60 @@ const Mens = () => {
                     {openDropdown === "size" && (
                       <div className="dropdown-content-men">
                         <label>
-                          <input type="checkbox" /> S
+                          <input
+                            type="checkbox"
+                            checked={selectedSize.includes("S")}
+                            onChange={() =>
+                              setSelectedSize((prev) =>
+                                prev.includes("S")
+                                  ? prev.filter((s) => s !== "S")
+                                  : [...prev, "S"]
+                              )
+                            }
+                          />
+                          S
                         </label>
                         <label>
-                          <input type="checkbox" /> M
+                          <input
+                            type="checkbox"
+                            checked={selectedSize.includes("M")}
+                            onChange={() =>
+                              setSelectedSize((prev) =>
+                                prev.includes("M")
+                                  ? prev.filter((m) => m !== "M")
+                                  : [...prev, "M"]
+                              )
+                            }
+                          />{" "}
+                          M
                         </label>
                         <label>
-                          <input type="checkbox" /> L
+                          <input
+                            type="checkbox"
+                            checked={selectedSize.includes("L")}
+                            onChange={() =>
+                              setSelectedSize((prev) =>
+                                prev.includes("L")
+                                  ? prev.filter((l) => l !== "L")
+                                  : [...prev, "L"]
+                              )
+                            }
+                          />{" "}
+                          L
                         </label>
                         <label>
-                          <input type="checkbox" /> XL
+                          <input
+                            type="checkbox"
+                            checked={selectedSize.includes("XL")}
+                            onChange={() =>
+                              setSelectedSize((prev) =>
+                                prev.includes("XL")
+                                  ? prev.filter((xl) => xl !== "XL")
+                                  : [...prev, "XL"]
+                              )
+                            }
+                          />{" "}
+                          XL
                         </label>
                       </div>
                     )}
@@ -450,7 +550,7 @@ const Mens = () => {
           {/* filter section end*/}
           {/* product image section */}
           <div className="all-product-image-section">
-            {typedFilteredProducts.map((AllmensClothes) => (
+            {finalFilteredProducts.map((AllmensClothes) => (
               <div key={AllmensClothes.id} className="all-content-mens-section">
                 <div className="image-main-mens-container">
                   <img

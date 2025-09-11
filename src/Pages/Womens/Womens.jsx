@@ -24,6 +24,11 @@ const Womens = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("banarshi");
 
+  // filter karege type ke anusar se uske liye ye hai
+  // const [selectedPrices, setSelectedPrices] = useState([]);
+  // const [selectedTypes, setSelectedTypes] = useState([]);
+  // const [selectedSize, setSelectedSize] = useState([]);
+
   const dispatch = useDispatch();
   const likedItems = useSelector((state) => state.liked);
 
@@ -329,7 +334,7 @@ const Womens = () => {
                     className="left-side-texts-women"
                     onClick={() => toggleDropdown("productType")}
                   >
-                    Product Type {openDropdown === "productType" ? "▲" : "▼"}
+                    Product Type {openDropdown === "productType" ? "▼" : "▲"}
                   </p>
                   {openDropdown === "productType" && (
                     <div className="dropdown-content-women open">

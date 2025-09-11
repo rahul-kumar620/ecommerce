@@ -20,6 +20,11 @@ const Girls = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [filteredVisible, setFilteredVisible] = useState(false);
 
+  // filter karege type ke anusar se uske liye ye hai
+  const [selectedTypes, setSelectedTypes] = useState([]);
+  const [selectedSize, setSelectedSize] = useState([]);
+
+  // redux
   const dispatch = useDispatch();
   const likedItems = useSelector((state) => state.liked);
   const navigate = useNavigate();
@@ -97,6 +102,8 @@ const Girls = () => {
         price: "1600",
         span: "1100",
         inStock: true,
+        type: "Kurti",
+        size: ["S"],
       },
       {
         id: 2,
@@ -107,6 +114,8 @@ const Girls = () => {
         price: "1400",
         span: "1200",
         inStock: false,
+        type: "Kurti",
+        size: ["M"],
       },
       {
         id: 3,
@@ -116,6 +125,7 @@ const Girls = () => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
         price: "1200",
         span: "800",
+        type: "Jeans Top",
       },
       {
         id: 4,
@@ -152,6 +162,7 @@ const Girls = () => {
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
         price: "1299",
         span: "1199",
+        type: "Shuit",
       },
       {
         id: 8,
@@ -246,6 +257,20 @@ const Girls = () => {
     ...products.bestSellers,
     ...products.saleItems,
   ];
+
+  // catagory section start
+
+  const filteredProducts = allProducts.filter((product) => {
+    const matchType =
+      selectedTypes.length === 0 || selectedTypes.includes(product.type);
+
+    const matchSize =
+      selectedSize.length === 0 ||
+      (product.size && product.size.some((s) => selectedSize.includes(s)));
+
+    return matchType && matchSize;
+  });
+
   return (
     <>
       <div className="main-container-girls">
@@ -267,18 +292,51 @@ const Girls = () => {
                     className="left-side-texts-women"
                     onClick={() => toggleDropdown("productType")}
                   >
-                    Product Type {openDropdown === "productType" ? "▲" : "▼"}
+                    Product Type {openDropdown === "productType" ? "▼" : "▲"}
                   </p>
                   {openDropdown === "productType" && (
                     <div className="dropdown-content-women open">
                       <label>
-                        <input type="checkbox" /> Kurti
+                        <input
+                          type="checkbox"
+                          checked={selectedTypes.includes("Kurti")}
+                          onChange={() =>
+                            setSelectedTypes((prev) =>
+                              prev.includes("Kurti")
+                                ? prev.filter((k) => k != "Kurti")
+                                : [...prev, "Kurti"]
+                            )
+                          }
+                        />{" "}
+                        Kurti
                       </label>
                       <label>
-                        <input type="checkbox" /> Jeans Top
+                        <input
+                          type="checkbox"
+                          checked={selectedTypes.includes("Jeans Top")}
+                          onChange={() =>
+                            setSelectedTypes((prev) =>
+                              prev.includes("Jeans Top")
+                                ? prev.filter((j) => j != "Jeans Top")
+                                : [...prev, "Jeans Top"]
+                            )
+                          }
+                        />{" "}
+                        Jeans Top
                       </label>
                       <label>
-                        <input type="checkbox" /> Jackets
+                        <input
+                          type="checkbox"
+                          checked={selectedTypes.includes("Shuit")}
+                          onChange={() =>
+                            setSelectedTypes((prev) =>
+                              prev.includes("Shuit")
+                                ? prev.filter((s) => s != "Shuit")
+                                : [...prev, "Shuit"]
+                            )
+                          }
+                        />{" "}
+                        Shuit
                       </label>
                     </div>
                   )}
@@ -290,21 +348,65 @@ const Girls = () => {
                     className="left-side-texts-women"
                     onClick={() => toggleDropdown("size")}
                   >
-                    Size {openDropdown === "size" ? "▲" : "▼"}
+                    Size {openDropdown === "size" ? "▼" : "▲"}
                   </p>
                   {openDropdown === "size" && (
                     <div className="dropdown-content-women open">
                       <label>
-                        <input type="checkbox" /> S
+                        <input
+                          type="checkbox"
+                          checked={selectedSize.includes("S")}
+                          onChange={() =>
+                            setSelectedSize((prev) =>
+                              prev.includes("S")
+                                ? prev.filter((s) => s !== "S")
+                                : [...prev, "S"]
+                            )
+                          }
+                        />{" "}
+                        S
                       </label>
                       <label>
-                        <input type="checkbox" /> M
+                        <input
+                          type="checkbox"
+                          checked={selectedSize.includes("M")}
+                          onChange={() =>
+                            setSelectedSize((prev) =>
+                              prev.includes("M")
+                                ? prev.filter((m) => m !== "M")
+                                : [...prev, "M"]
+                            )
+                          }
+                        />{" "}
+                        M
                       </label>
                       <label>
-                        <input type="checkbox" /> L
+                        <input
+                          type="checkbox"
+                          checked={selectedSize.includes("L")}
+                          onChange={() =>
+                            setSelectedSize((prev) =>
+                              prev.includes("L")
+                                ? prev.filter((l) => l !== "L")
+                                : [...prev, "L"]
+                            )
+                          }
+                        />{" "}
+                        L
                       </label>
                       <label>
-                        <input type="checkbox" /> XL
+                        <input
+                          type="checkbox"
+                          checked={selectedSize.includes("XL")}
+                          onChange={() =>
+                            setSelectedSize((prev) =>
+                              prev.includes("XL")
+                                ? prev.filter((xl) => xl !== "XL")
+                                : [...prev, "XL"]
+                            )
+                          }
+                        />{" "}
+                        XL
                       </label>
                     </div>
                   )}
@@ -316,7 +418,7 @@ const Girls = () => {
                     className="left-side-texts-women"
                     onClick={() => toggleDropdown("color")}
                   >
-                    Colour/Variant {openDropdown === "color" ? "▲" : "▼"}
+                    Colour/Variant {openDropdown === "color" ? "▼" : "▲"}
                   </p>
                   {openDropdown === "color" && (
                     <div className="dropdown-content-women open">
@@ -339,15 +441,18 @@ const Girls = () => {
                     className="left-side-texts-women"
                     onClick={() => toggleDropdown("price")}
                   >
-                    Price Range {openDropdown === "price" ? "▲" : "▼"}
+                    Price Range {openDropdown === "price" ? "▼" : "▲"}
                   </p>
                   {openDropdown === "price" && (
                     <div className="dropdown-content-women open">
                       <label>
-                        <input type="checkbox" /> ₹0 - ₹500
+                        <input type="checkbox" /> ₹0 - ₹300
                       </label>
                       <label>
-                        <input type="checkbox" /> ₹500 - ₹1000
+                        <input type="checkbox" /> ₹500 - ₹700
+                      </label>
+                      <label>
+                        <input type="checkbox" /> ₹700 - ₹1000
                       </label>
                       <label>
                         <input type="checkbox" /> ₹1000+
@@ -368,7 +473,7 @@ const Girls = () => {
         </div>
         {/* image section */}
         <div className="main-girls-section">
-          {allProducts.map((product) => (
+          {filteredProducts.map((product) => (
             <div key={product.id} className="all-content-section">
               <div className="image-main-container">
                 <img
