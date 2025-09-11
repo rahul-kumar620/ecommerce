@@ -7,6 +7,7 @@ import { PiWhatsappLogoThin } from "react-icons/pi";
 import { CiStopwatch } from "react-icons/ci";
 
 import "./Footer.scss";
+import { Link, NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="main_footer">
@@ -25,17 +26,15 @@ const Footer = () => {
         <div className="address_icon_main_section">
           <div className="address_item">
             <CiLocationOn className=" location_icon text-[40px]" />
-            <span>
-              Bypass Road Gurua Near By Jitender Baksa Dukan Gurua Gaya, 824205
-            </span>
+            <span>Bypass Road Gurua Near By Jio Office Gurua Gaya, 824205</span>
           </div>
           <div className="address_item">
             <PiPhoneCallThin className="text-[25px]" />
-            <span>+91 - 9334837719</span>
+            <Link>+91 - 6202802412</Link>
           </div>
           <div className="address_item">
             <PiWhatsappLogoThin className="text-[25px]" />
-            <span>+91 - 9334837719</span>
+            <Link>+91 - 6202802412</Link>
           </div>
           <div className="address_item">
             <CiStopwatch className="text-[25px]" />
@@ -49,9 +48,11 @@ const Footer = () => {
             <h1 className="footer_shop">Shop</h1>
           </div>
           <div className="footer_sub_item_section">
+            <NavLink to="/productmanager" className="footer_item_all_text">
+              Product Manager
+            </NavLink>
             <p className="footer_item_all_text">GOWN</p>
             <p className="footer_item_all_text">IN THE SPOTLIGHT</p>
-            <p className="footer_item_all_text">BEST SELLERS</p>
             <p className="footer_item_all_text">ETHNIC WEAR</p>
             <p className="footer_item_all_text">KURTI</p>
           </div>
