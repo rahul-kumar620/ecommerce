@@ -867,6 +867,16 @@
     animation-fill-mode: forwards;
   }
 
+  .home-main-price {
+    color: #777;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: line-through;
+  }
+  .home-discount-price {
+    color: rgb(252, 67, 67);
+  }
+
   @keyframes slideDown {
     0% {
       transform: translateY(-300px);
