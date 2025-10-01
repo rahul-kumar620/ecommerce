@@ -162,6 +162,10 @@
   gap: 10px;
   justify-content: center;
 }
+.main-price {
+  color: rgb(249, 102, 102);
+  text-decoration: line-through;
+}
 
 .image_container {
   position: relative;
@@ -287,6 +291,15 @@
   opacity: 2;
   animation-fill-mode: forwards;
 }
+.home-main-price {
+  color: #777;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+.home-discount-price {
+  color: rgb(252, 67, 67);
+}
 
 @keyframes slideDown {
   0% {
@@ -298,6 +311,8 @@
     opacity: 1;
   }
 }
+
+/* animation  */
 
 /* medium device */
 

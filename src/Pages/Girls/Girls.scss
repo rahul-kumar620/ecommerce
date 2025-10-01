@@ -149,20 +149,15 @@
     border-top: 1px solid #f1f1f1;
     display: flex;
     justify-content: center;
-    gap: 30px;
-  }
-
-  .product-price {
-    font-size: 16px;
-    font-weight: 600;
-    color: #000;
-  }
-
-  .product-span {
-    font-size: 14px;
-    color: #ff5722;
-    text-decoration: line-through;
-    font-weight: 500;
+    gap: 10px;
+    & .girls-main-price {
+      color: #777;
+      text-decoration: line-through;
+      font-weight: 500;
+    }
+    & .girls-discount-price {
+      color: #ff5722;
+    }
   }
 }
 

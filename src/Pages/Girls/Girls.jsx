@@ -99,11 +99,11 @@ const Girls = () => {
         title: "Women’s Casual Straight Kurti with Side Slits",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749865427/pexels-shootsaga-30809730_nrurvm.webp",
-        price: "1600",
         span: "1100",
         inStock: true,
         type: "Kurti",
         size: ["S"],
+        discount: 20,
       },
       {
         id: 2,
@@ -111,11 +111,11 @@ const Girls = () => {
         title: "Rayon A-Line Kurti with Floral Pattern and 3/4 Sleeves",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749865428/WhatsAppImage2023-08-09at18.40.20_1_1_.jpegcopy3_p8wvbi.webp",
-        price: "1400",
         span: "1200",
         inStock: false,
         type: "Kurti",
         size: ["M"],
+        discount: 30,
       },
       {
         id: 3,
@@ -123,9 +123,10 @@ const Girls = () => {
         title: "Ethnic Straight Kurti with Block Print Design",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
-        price: "1200",
         span: "800",
         type: "Jeans Top",
+        size: ["L"],
+        discount: 40,
       },
       {
         id: 4,
@@ -133,8 +134,10 @@ const Girls = () => {
         title: "Designer Kurti with Intricate Thread Work",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808440/pexels-mk-1182794846-22431192_xp4umg.webp",
-        price: "1300",
         span: "900",
+        type: "Jeans Top",
+        size: ["L"],
+        discount: 40,
       },
       {
         id: 5,
@@ -142,8 +145,10 @@ const Girls = () => {
         title: "Women’s Casual Block Print Straight Kurti",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
-        price: "1700",
         span: "1500",
+        type: "Jeans Top",
+        size: ["L"],
+        discount: 40,
       },
       {
         id: 6,
@@ -151,8 +156,10 @@ const Girls = () => {
         title: "Lightweight Rayon Kurti for Daily Wear",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
-        price: "1599",
         span: "1299",
+        type: "Jeans Top",
+        size: ["L"],
+        discount: 40,
       },
       {
         id: 7,
@@ -160,9 +167,10 @@ const Girls = () => {
         title: "Stylish Kurti with Allover Print & Button Detailing",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
-        price: "1299",
         span: "1199",
         type: "Shuit",
+        size: ["L"],
+        discount: 50,
       },
       {
         id: 8,
@@ -170,8 +178,10 @@ const Girls = () => {
         title: "Classic Cotton Kurti with Embroidered Yoke",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
-        price: "899",
         span: "999",
+        type: "Jeans Top",
+        size: ["XL"],
+        discount: 20,
       },
     ],
     bestSellers: [
@@ -181,8 +191,10 @@ const Girls = () => {
         title: "Women’s Velvet Kurti with Full Sleeves",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808445/pexels-mk-1182794846-22064227_xmiygk.webp",
-        price: "1650",
         span: "1300",
+        type: "Jeans Top",
+        size: ["L"],
+        discount: 30,
       },
       {
         id: 10,
@@ -190,8 +202,10 @@ const Girls = () => {
         title: "Embroidered Anarkali Kurti for Festive Occasions",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-neha-mishra-1851906907-28512776_dz74dx.webp",
-        price: "1300",
         span: "1000",
+        type: "Jeans Top",
+        size: ["L"],
+        discount: 40,
       },
       {
         id: 11,
@@ -199,8 +213,10 @@ const Girls = () => {
         title: "Trendy Denim Kurti with Button Front",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/71lSQmEASkL._AC_UY1100__lyfpf7.jpg",
-        price: "1200",
         span: "900",
+        type: "Jeans Top",
+        size: ["L"],
+        discount: 40,
       },
       {
         id: 12,
@@ -208,8 +224,10 @@ const Girls = () => {
         title: "Casual Printed Kurti with Straight Fit",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/71lSQmEASkL._AC_UY1100__lyfpf7.jpg",
-        price: "500",
         span: "300",
+        type: "Jeans Top",
+        size: ["L"],
+        discount: 40,
       },
     ],
     saleItems: [
@@ -219,8 +237,10 @@ const Girls = () => {
         title: "Basic Cotton Kurti for Everyday Wear",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
-        price: "500",
         span: "300",
+        type: "Jeans Top",
+        size: ["L"],
+        discount: 40,
       },
       {
         id: 14,
@@ -228,8 +248,10 @@ const Girls = () => {
         title: "Kurti with Water-Repellent Finish for Outdoor Use",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
-        price: "500",
-        span: "300",
+        span: "3000",
+        type: "Jeans Top",
+        size: ["XL"],
+        discount: 40,
       },
       {
         id: 15,
@@ -237,8 +259,10 @@ const Girls = () => {
         title: "Modern Kurti with Stylish Graphic Prints",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
-        price: "500",
-        span: "300",
+        span: "2000",
+        type: "Jeans Top",
+        size: ["L"],
+        discount: 40,
       },
       {
         id: 16,
@@ -246,8 +270,10 @@ const Girls = () => {
         title: "Breathable Cotton Kurti for Casual Days",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
-        price: "500",
-        span: "300",
+        span: "4000",
+        type: "Jeans Top",
+        size: ["L"],
+        discount: 40,
       },
     ],
   };
@@ -270,6 +296,12 @@ const Girls = () => {
 
     return matchType && matchSize;
   });
+
+  // culcate a discount price
+  const calculateDiscountedPrice = (span, discount) => {
+    if (!span || !discount) return span;
+    return Math.floor(span - (span * discount) / 100);
+  };
 
   return (
     <>
@@ -512,10 +544,12 @@ const Girls = () => {
                 <p className="product-name">{product.name}</p>
               </div>
               <div className="pricing">
-                <p className="product-price">&#8377;{product.price}</p>
-                <p className="product-span strike-price ">
-                  &#8377;{product.span}
+                <p>
+                  {" "}
+                  ₹{calculateDiscountedPrice(product.span, product.discount)}
                 </p>
+                <span className="girls-main-price">₹{product.span}</span>
+                <p className="girls-discount-price"> {product.discount}% off</p>
               </div>
             </div>
           ))}

@@ -168,7 +168,15 @@
       border-top: 1px solid #f1f1f1;
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 10px;
+      & .main-price {
+        color: #777;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      & .wones-discount-price {
+        color: #f85a2a;
+      }
     }
 
     .product-price-women {

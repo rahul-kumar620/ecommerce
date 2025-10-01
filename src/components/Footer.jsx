@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
           <div className="address_item">
             <PiPhoneCallThin className="text-[25px]" />
-            <Link>+91 - 6202802412</Link>
+            <Link>+91 - 93</Link>
           </div>
           <div className="address_item">
             <PiWhatsappLogoThin className="text-[25px]" />
