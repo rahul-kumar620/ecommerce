@@ -9,6 +9,13 @@ const Favorites = () => {
   const likedItems = useSelector((state) => state.liked || {});
   const likedArray = Object.values(likedItems);
 
+  // calculate discount
+
+  const calculateDiscountedPrice = (span, discount) => {
+    if (!span || !discount) return span;
+    return Math.floor(span - (span * discount) / 100);
+  };
+
   return (
     <div className="wishlist-container">
       <h2 className="favorite-main-heading">Your Wishlist</h2>
@@ -20,7 +27,8 @@ const Favorites = () => {
             <div key={`${item.id}-${index}`} className="wishlist-item">
               <img src={item.image} alt={item.title} />
               <p>{item.name}</p>
-              <p>₹{item.price}</p>
+              <p>₹{calculateDiscountedPrice(item.span, item.discount)}</p>
+              {/* <p>₹{item.span}</p> */}
               <button
                 onClick={() =>
                   navigate(`/Productdetails/${item.id}`, {

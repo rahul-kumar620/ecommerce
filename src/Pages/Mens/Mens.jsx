@@ -66,11 +66,11 @@ const Mens = () => {
         title: "Women’s Casual Straight Kurti with Side Slits",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031739/EXCG00014CARBON_1_ciljac.webp",
-        price: "₹200",
-        span: "₹150",
+        span: "800",
         inStock: true,
         type: "T-Shirt",
         size: ["S"],
+        discount: 20,
       },
       {
         id: 2,
@@ -78,11 +78,11 @@ const Mens = () => {
         title: "Rayon A-Line Kurti with Floral Pattern and 3/4 Sleeves",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031739/EXCG00014CARBON_1_ciljac.webp",
-        price: "₹700",
-        span: "₹250",
+        span: "700",
         inStock: false,
         type: "Shirt",
         size: ["M"],
+        discount: 20,
       },
       {
         id: 3,
@@ -90,10 +90,10 @@ const Mens = () => {
         title: "Ethnic Straight Kurti with Block Print Design",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031848/MFL00019MOUNTAIN_1_rlzvpz.webp",
-        price: "₹600",
-        span: "₹350",
+        span: "600",
         type: "Jeanse",
         size: ["L"],
+        discount: 20,
       },
       {
         id: 4,
@@ -101,10 +101,10 @@ const Mens = () => {
         title: "Designer Kurti with Intricate Thread Work",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031848/MFL00019MOUNTAIN_1_rlzvpz.webp",
-        price: "₹700",
-        span: "₹300",
+        span: "800",
         type: "Jeanse",
         size: ["XL"],
+        discount: 20,
       },
       {
         id: 5,
@@ -112,10 +112,10 @@ const Mens = () => {
         title: "Women’s Casual Block Print Straight Kurti",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031866/SMCH00003EBONY_1_vuewpe.webp",
-        price: "₹400",
-        span: "₹350",
+        span: "750",
         type: "Shirt",
         size: ["L"],
+        discount: 30,
       },
       {
         id: 6,
@@ -123,10 +123,10 @@ const Mens = () => {
         title: "Lightweight Rayon Kurti for Daily Wear",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031848/MFL00019MOUNTAIN_1_rlzvpz.webp",
-        price: "₹600",
-        span: "₹500",
+        span: "900",
         type: "Jeanse",
         size: ["L"],
+        discount: 35,
       },
       {
         id: 7,
@@ -134,10 +134,10 @@ const Mens = () => {
         title: "Stylish Kurti with Allover Print & Button Detailing",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031868/SMLW00002BEIGE_1_lavn27.webp",
-        price: "₹500",
-        span: "₹400",
+        span: "700",
         type: "Jeanse",
         size: ["XL"],
+        discount: 20,
       },
       {
         id: 8,
@@ -145,10 +145,10 @@ const Mens = () => {
         title: "Classic Cotton Kurti with Embroidered Yoke",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031871/SMLW00004DRYGRASS_1_ff03ed69-2678-4728-a04c-c336e9a2d4e4_x0dnkp.webp",
-        price: "₹600",
-        span: "₹400",
+        span: "600",
         type: "Jeanse",
         size: ["M"],
+        discount: 20,
       },
     ],
     tshirt: [
@@ -158,10 +158,10 @@ const Mens = () => {
         title: "Women’s Velvet Kurti with Full Sleeves",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031875/MSK00130ASPENGREEN_1_rffuop.webp",
-        price: "₹500",
-        span: "₹400",
+        span: "800",
         type: "Shirt",
         size: ["L"],
+        discount: 20,
       },
       {
         id: 10,
@@ -169,10 +169,10 @@ const Mens = () => {
         title: "Embroidered Anarkali Kurti for Festive Occasions",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1751524927/bblobmsjbxnkphukd0mx_375x350_crop_center_x4cdcl.webp",
-        price: "₹500",
-        span: "₹400",
+        span: "1200",
         type: "T-Shirt",
         size: ["M"],
+        discount: 20,
       },
       {
         id: 11,
@@ -180,10 +180,10 @@ const Mens = () => {
         title: "Trendy Denim Kurti with Button Front",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1751524927/bblobmsjbxnkphukd0mx_375x350_crop_center_x4cdcl.webp",
-        price: "₹600",
-        span: "₹400",
+        span: "1500",
         type: "Jeanse",
         size: ["L"],
+        discount: 30,
       },
       {
         id: 12,
@@ -191,10 +191,10 @@ const Mens = () => {
         title: "Casual Printed Kurti with Straight Fit",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1751524927/bblobmsjbxnkphukd0mx_375x350_crop_center_x4cdcl.webp",
-        price: "₹500",
-        span: "₹450",
+        span: "750",
         type: "Jeanse",
         size: ["M"],
+        discount: 20,
       },
     ],
     jeanse: [
@@ -204,10 +204,10 @@ const Mens = () => {
         title: "Basic Cotton Kurti for Everyday Wear",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1751524927/bblobmsjbxnkphukd0mx_375x350_crop_center_x4cdcl.webp",
-        price: "₹1000",
-        span: "₹900",
+        span: "900",
         type: "Jeanse",
         size: ["S"],
+        discount: 20,
       },
       {
         id: 14,
@@ -215,10 +215,10 @@ const Mens = () => {
         title: "Kurti with Water-Repellent Finish for Outdoor Use",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1751524927/bblobmsjbxnkphukd0mx_375x350_crop_center_x4cdcl.webp",
-        price: "₹1100",
-        span: "₹1000",
+        span: "1000",
         type: "Jeanse",
         size: ["L"],
+        discount: 20,
       },
       {
         id: 15,
@@ -226,10 +226,10 @@ const Mens = () => {
         title: "Modern Kurti with Stylish Graphic Prints",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1751524927/bblobmsjbxnkphukd0mx_375x350_crop_center_x4cdcl.webp",
-        price: "₹1300",
-        span: "₹1200",
+        span: "1200",
         type: "Jeanse",
         size: ["L"],
+        discount: 20,
       },
       {
         id: 16,
@@ -237,10 +237,10 @@ const Mens = () => {
         title: "Breathable Cotton Kurti for Casual Days",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1751524927/bblobmsjbxnkphukd0mx_375x350_crop_center_x4cdcl.webp",
-        price: "₹900",
-        span: "₹750",
+        span: "750",
         type: "Jeanse",
         size: ["M"],
+        discount: 15,
       },
     ],
   };
@@ -275,7 +275,7 @@ const Mens = () => {
 
   // filtered product list with type + price filters combined kar rahe hai
   const finalFilteredProducts = categoryProducts.filter((product) => {
-    const numericPrice = parseInt(product.price.replace(/[₹,]/g, ""));
+    const numericPrice = parseInt(product.span.replace(/[₹,]/g, ""));
 
     // Type Filter
     if (selectedTypes.length > 0 && !selectedTypes.includes(product.type)) {
@@ -303,6 +303,13 @@ const Mens = () => {
     }
     return true;
   });
+
+  // discount function
+  const calculateDiscountedPrice = (span, discount) => {
+    if (!span || !discount) return span;
+    const numericPrice = parseInt(span.replace(/[₹,]/g, ""));
+    return Math.floor(numericPrice - (numericPrice * discount) / 100);
+  };
 
   return (
     <>
@@ -586,9 +593,23 @@ const Mens = () => {
                   </div>
                 </div>
                 <h3 className="product-boys-name">{AllmensClothes.name}</h3>
-                <div className="combine-price-or-span">
+                {/* <div className="combine-price-or-span">
                   <p className="price-product-mens">{AllmensClothes.price}</p>
                   <p className="span-price-mens">{AllmensClothes.span}</p>
+                </div> */}
+                <div className="combine-price-or-span">
+                  <p>
+                    ₹
+                    {calculateDiscountedPrice(
+                      AllmensClothes.span,
+                      AllmensClothes.discount
+                    )}
+                  </p>
+                  <p className="men-main-price">₹{AllmensClothes.span}</p>
+                  <p className="men-discount-price">
+                    {" "}
+                    {AllmensClothes.discount}% off
+                  </p>
                 </div>
               </div>
             ))}

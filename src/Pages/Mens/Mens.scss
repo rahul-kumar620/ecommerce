@@ -161,15 +161,14 @@
         display: flex;
         justify-content: center;
         gap: 10px;
-        & .price-product-mens {
+        & .men-main-price {
+          color: #777;
           font-size: 16px;
           font-weight: 500;
-        }
-        & .span-price-mens {
-          font-size: 14px;
-          font-weight: 500;
-          color: red;
           text-decoration: line-through;
+        }
+        & .men-discount-price {
+          color: rgb(252, 67, 67);
         }
       }
     }

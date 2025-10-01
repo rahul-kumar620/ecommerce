@@ -16,7 +16,7 @@ const CartPages = () => {
   };
 
   const calculateSubtotal = (items) => {
-    return items.reduce((total, item) => total + item.price * item.quantity, 0);
+    return items.reduce((total, item) => total + item.span * item.quantity, 0);
   };
 
   const calculateDiscount = (items) => {
@@ -85,7 +85,7 @@ const CartPages = () => {
                     </div>
 
                     <div className="product-price">
-                      <p className="product-price-text">{item.price}</p>
+                      <p className="product-price-text">{item.span}</p>
                       {/* Price: ₹ */}
                     </div>
                   </div>

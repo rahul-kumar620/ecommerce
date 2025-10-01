@@ -93,9 +93,9 @@ const Womens = () => {
         title: "Women’s Casual Straight Kurti with Side Slits",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750914458/ram-rasiya-vishwamitra-saree-wholesale-catalog-0-2024-01-24_12_13_42_ohyflg.jpg",
-        price: "1600",
-        span: "1100",
+        span: "1800",
         inStock: true,
+        discount: 30,
       },
       {
         id: 2,
@@ -103,9 +103,9 @@ const Womens = () => {
         title: "Rayon A-Line Kurti with Floral Pattern and 3/4 Sleeves",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750914362/rr-vayuputra-1-images-10_trwwcm.jpg",
-        price: "1400",
-        span: "1200",
+        span: "2000",
         inStock: false,
+        discount: 30,
       },
       {
         id: 3,
@@ -113,9 +113,9 @@ const Womens = () => {
         title: "Ethnic Straight Kurti with Block Print Design",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750914362/rr-vayuputra-1-images-10_trwwcm.jpg",
-        price: "1200",
-        span: "800",
+        span: "1500",
         inStock: true,
+        discount: 20,
       },
       {
         id: 4,
@@ -123,8 +123,9 @@ const Womens = () => {
         title: "Designer Kurti with Intricate Thread Work",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750914362/rr-vayuputra-1-images-10_trwwcm.jpg",
-        price: "1300",
-        span: "900",
+        span: "1900",
+        inStock: false,
+        discount: 20,
       },
       {
         id: 5,
@@ -132,8 +133,9 @@ const Womens = () => {
         title: "Women’s Casual Block Print Straight Kurti",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750914362/rr-vayuputra-1-images-10_trwwcm.jpg",
-        price: "1700",
         span: "1500",
+        inStock: true,
+        discount: 30,
       },
       {
         id: 6,
@@ -141,8 +143,9 @@ const Womens = () => {
         title: "Lightweight Rayon Kurti for Daily Wear",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
-        price: "1599",
-        span: "1299",
+        span: "1599",
+        inStock: true,
+        discount: 20,
       },
       {
         id: 7,
@@ -150,9 +153,9 @@ const Womens = () => {
         title: "Stylish Kurti with Allover Print & Button Detailing",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
-        price: "1299",
-        span: "1199",
+        span: "1799",
         inStock: true,
+        discount: 25,
       },
       {
         id: 8,
@@ -160,9 +163,9 @@ const Womens = () => {
         title: "Classic Cotton Kurti with Embroidered Yoke",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750914362/rr-vayuputra-1-images-10_trwwcm.jpg",
-        price: "899",
-        span: "999",
+        span: "2999",
         inStock: true,
+        discount: 40,
       },
     ],
     pathshala: [
@@ -172,8 +175,9 @@ const Womens = () => {
         title: "Women’s Velvet Kurti with Full Sleeves",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750993694/52664-204_kcadnq.webp",
-        price: "1650",
-        span: "1300",
+        span: "2500",
+        inStock: true,
+        discount: 50,
       },
       {
         id: 10,
@@ -181,7 +185,9 @@ const Womens = () => {
         title: "Embroidered Anarkali Kurti for Festive Occasions",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750993694/52664-203_rwh1lc.webp",
-        price: "$35",
+        span: 3000,
+        inStock: true,
+        discount: 30,
       },
       {
         id: 11,
@@ -189,7 +195,9 @@ const Womens = () => {
         title: "Trendy Denim Kurti with Button Front",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750993694/52664-204_1_iy7zyg.webp",
-        price: "$29",
+        span: 800,
+        inStock: true,
+        discount: 30,
       },
       {
         id: 12,
@@ -197,7 +205,9 @@ const Womens = () => {
         title: "Casual Printed Kurti with Straight Fit",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750993694/52664-209_pugk9q.webp",
-        price: "$50",
+        span: 600,
+        inStock: true,
+        discount: 20,
       },
     ],
     ramrashiya: [
@@ -207,7 +217,9 @@ const Womens = () => {
         title: "Basic Cotton Kurti for Everyday Wear",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
-        price: "$10",
+        span: 600,
+        inStock: true,
+        discount: 20,
       },
       {
         id: 14,
@@ -215,7 +227,9 @@ const Womens = () => {
         title: "Kurti with Water-Repellent Finish for Outdoor Use",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
-        price: "$18",
+        span: 600,
+        inStock: true,
+        discount: 20,
       },
       {
         id: 15,
@@ -223,7 +237,9 @@ const Womens = () => {
         title: "Modern Kurti with Stylish Graphic Prints",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
-        price: "$12",
+        span: 600,
+        inStock: true,
+        discount: 20,
       },
       {
         id: 16,
@@ -231,7 +247,9 @@ const Womens = () => {
         title: "Breathable Cotton Kurti for Casual Days",
         image:
           "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
-        price: "$22",
+        span: 600,
+        inStock: true,
+        discount: 20,
       },
     ],
   };
@@ -241,6 +259,13 @@ const Womens = () => {
     ...products.pathshala,
     ...products.ramrashiya,
   ];
+
+  // discount price
+
+  const calculateDiscountedPrice = (span, discount) => {
+    if (!span || !discount) return span;
+    return Math.floor(span - (span * discount) / 100);
+  };
 
   return (
     <div className="main-women-section">
@@ -479,10 +504,11 @@ const Womens = () => {
                 <p className="product-name-women">{product.name}</p>
               </div>
               <div className="pricing-women">
-                <p className="product-price-women">&#8377;{product.price}</p>
-                <p className="product-span-women strike-price ">
-                  &#8377;{product.span}
+                <p>
+                  ₹{calculateDiscountedPrice(product.span, product.discount)}
                 </p>
+                <p className="main-price">₹{product.span}</p>
+                <p className="wones-discount-price"> {product.discount}% off</p>
               </div>
             </div>
           ))}
