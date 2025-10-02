@@ -887,7 +887,7 @@
   }
   .home-discount-price {
     color: rgb(252, 67, 67);
-    font-size: 13px;
+    font-size: 12px;
   }
 
   @keyframes slideDown {
