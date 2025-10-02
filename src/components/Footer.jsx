@@ -13,7 +13,7 @@ const Footer = () => {
     <div className="main_footer">
       <div className="sub_footer">
         <div className="footer_image">
-          <img src="https://res.cloudinary.com/dqprmy5ro/image/upload/v1750063720/footer-image_mjxoyo.jpg" />
+          <img src="https://res.cloudinary.com/dqprmy5ro/image/upload/v1759389655/Gemini_Generated_Image_7mgp457mgp457mgp_tzfbal.png" />
         </div>
         <div className="heading_text_footer">
           <p className="main_heading_footer">
