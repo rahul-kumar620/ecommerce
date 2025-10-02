@@ -579,6 +579,15 @@
     font-weight: 400;
     line-height: 1.5;
   }
+  .home-main-price {
+    color: #777;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: line-through;
+  }
+  .home-discount-price {
+    color: rgb(252, 67, 67);
+  }
 }
 
 @media (max-width: 767px) {
@@ -736,7 +745,7 @@
   }
   .product_price {
     display: flex;
-    gap: 10px;
+    gap: 7px;
     justify-content: center;
   }
 
@@ -867,6 +876,9 @@
     animation-fill-mode: forwards;
   }
 
+  .home-main-discount-price {
+    font-size: 14px;
+  }
   .home-main-price {
     color: #777;
     font-size: 13px;
@@ -875,6 +887,7 @@
   }
   .home-discount-price {
     color: rgb(252, 67, 67);
+    font-size: 13px;
   }
 
   @keyframes slideDown {

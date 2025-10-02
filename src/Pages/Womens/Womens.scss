@@ -365,20 +365,15 @@
         border-top: 1px solid #f1f1f1;
         display: flex;
         justify-content: center;
-        gap: 30px;
-      }
-
-      .product-price-women {
-        font-size: 16px;
-        font-weight: 600;
-        color: #000;
-      }
-
-      .product-span-women {
-        font-size: 14px;
-        color: #ff5722;
-        text-decoration: line-through;
-        font-weight: 500;
+        gap: 10px;
+        & .main-price {
+          color: #777;
+          font-size: 16px;
+          font-weight: 500;
+        }
+        & .wones-discount-price {
+          color: #f85a2a;
+        }
       }
     }
   }
@@ -562,20 +557,15 @@
         border-top: 1px solid #f1f1f1;
         display: flex;
         justify-content: center;
-        gap: 30px;
-      }
-
-      .product-price-women {
-        font-size: 16px;
-        font-weight: 600;
-        color: #000;
-      }
-
-      .product-span-women {
-        font-size: 14px;
-        color: #ff5722;
-        text-decoration: line-through;
-        font-weight: 500;
+        gap: 10px;
+        & .main-price {
+          color: #777;
+          font-size: 16px;
+          font-weight: 500;
+        }
+        & .wones-discount-price {
+          color: #f85a2a;
+        }
       }
     }
   }

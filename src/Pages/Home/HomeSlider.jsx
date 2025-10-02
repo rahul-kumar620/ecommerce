@@ -434,7 +434,7 @@ const HomeSlider = () => {
                           <IoStarOutline />
                         </div> */}
                         <div className="product_price">
-                          <p>
+                          <p className="home-main-discount-price">
                             ₹
                             {calculateDiscountedPrice(
                               product.span,
@@ -445,7 +445,6 @@ const HomeSlider = () => {
                             ₹{product.span}
                           </span>
                           <p className="home-discount-price">
-                            {" "}
                             {product.discount}% off
                           </p>
                         </div>
@@ -479,8 +478,8 @@ const HomeSlider = () => {
                     A Curated Celebration of Grace and Glamour
                   </span>
                   <p className="right-side-all-text">
-                    Where tradition meets contemporary style. Discover a new and curated
-                    range of
+                    Where tradition meets contemporary style. Discover a new and
+                    curated range of
                     <br /> sarees that blend the richness of Indian heritage
                     with the flair of modern
                     <br /> fashion. From luxurious silk drapes to vibrant
