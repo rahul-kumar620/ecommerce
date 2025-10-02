@@ -382,7 +382,7 @@ const Womens = () => {
                     className="left-side-texts-women"
                     onClick={() => toggleDropdown("size")}
                   >
-                    Size {openDropdown === "size" ? "▲" : "▼"}
+                    Size {openDropdown === "size" ? "▼" : "▲"}
                   </p>
                   {openDropdown === "size" && (
                     <div className="dropdown-content-women open">
@@ -408,7 +408,7 @@ const Womens = () => {
                     className="left-side-texts-women"
                     onClick={() => toggleDropdown("color")}
                   >
-                    Colour/Variant {openDropdown === "color" ? "▲" : "▼"}
+                    Colour/Variant {openDropdown === "color" ? "▼" : "▲"}
                   </p>
                   {openDropdown === "color" && (
                     <div className="dropdown-content-women open">
@@ -431,7 +431,7 @@ const Womens = () => {
                     className="left-side-texts-women"
                     onClick={() => toggleDropdown("price")}
                   >
-                    Price Range {openDropdown === "price" ? "▲" : "▼"}
+                    Price Range {openDropdown === "price" ? "▼" : "▲"}
                   </p>
                   {openDropdown === "price" && (
                     <div className="dropdown-content-women open">
