@@ -30,6 +30,13 @@ const ProductDetails = () => {
     return <h2>Product not found</h2>;
   }
 
+  // discount price
+
+  const calculatediscountprice = (span, discount) => {
+    if (!span || !discount) return span;
+    return Math.floor(span - (span * discount) / 100);
+  };
+
   return (
     <div className="product-details">
       <div className="product-container">
@@ -48,7 +55,7 @@ const ProductDetails = () => {
         <div className="right-panel">
           <h1>{product.name}</h1>
           <h3>{product.title}</h3>
-          <p className="price"> ₹{product.price}</p>
+          <p>₹{calculatediscountprice(product.span, product.discount)}</p>
 
           <div className="description">
             <h4>Description</h4>
