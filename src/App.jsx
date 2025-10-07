@@ -17,7 +17,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Router basename="/ecommerce">
+      <Router>
         <Headers />
         <main className="flex-grow">
           <Routes>
