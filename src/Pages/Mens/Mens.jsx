@@ -77,7 +77,7 @@ const Mens = () => {
         name: "Floral Print A-Line Kurti",
         title: "Rayon A-Line Kurti with Floral Pattern and 3/4 Sleeves",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031739/EXCG00014CARBON_1_ciljac.webp",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1760718296/photo-1611312449412-6cefac5dc3e4_kzbgvv.avif",
         span: "700",
         inStock: false,
         type: "Shirt",
@@ -111,7 +111,7 @@ const Mens = () => {
         name: "Block Print Cotton Kurti",
         title: "Women’s Casual Block Print Straight Kurti",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031866/SMCH00003EBONY_1_vuewpe.webp",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1760718295/photo-1525507119028-ed4c629a60a3_iampp5.avif",
         span: "750",
         type: "Shirt",
         size: ["L"],
@@ -133,7 +133,7 @@ const Mens = () => {
         name: "Elegant Printed Kurti",
         title: "Stylish Kurti with Allover Print & Button Detailing",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1756031868/SMLW00002BEIGE_1_lavn27.webp",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1760719642/photo-1611312449408-fcece27cdbb7_vqotgj.avif",
         span: "700",
         type: "Jeanse",
         size: ["XL"],
