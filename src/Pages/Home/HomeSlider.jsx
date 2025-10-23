@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // new change start
-// ✨ NEW IMPORT
+
 import { useDispatch, useSelector } from "react-redux";
 import { toggleLike } from "../../Redux/slices/LikeSlice";
 
