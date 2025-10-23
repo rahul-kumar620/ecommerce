@@ -7,20 +7,19 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // new change start
-// ✨ NEW IMPORT
 import { useDispatch, useSelector } from "react-redux";
 import { toggleLike } from "../../Redux/slices/LikeSlice";
 
 // new change end
 
 const Girls = () => {
-  // const [likedItems, setLikedItems] = useState({});
   // filter ke liye
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [filteredVisible, setFilteredVisible] = useState(false);
 
   // filter karege type ke anusar se uske liye ye hai
+  const [selectedPrices, setSelectedPrices] = useState([]);
   const [selectedTypes, setSelectedTypes] = useState([]);
   const [selectedSize, setSelectedSize] = useState([]);
 
@@ -28,21 +27,6 @@ const Girls = () => {
   const dispatch = useDispatch();
   const likedItems = useSelector((state) => state.liked);
   const navigate = useNavigate();
-  // const handleLike = (section, product) => {
-  //   const likeKey = `${section}-${product.id}`;
-
-  //   setLikedItems((prev) => {
-  //     const newLikes = { ...prev };
-
-  //     if (newLikes[likeKey]) {
-  //       delete newLikes[likeKey];
-  //     } else {
-  //       newLikes[likeKey] = product;
-  //     }
-
-  //     return newLikes;
-  //   });
-  // };
 
   //  new change redux start
 
@@ -79,17 +63,9 @@ const Girls = () => {
     setOpenDropdown(openDropdown === section ? null : section);
   };
 
-  //  catagari section
-  //  const handleCategoryClick = (category) => {
-  //    setSelectedCategory(category.toLowerCase());
-  //  };
-
   const handleView = (product) => {
     navigate(`/Productdetails/${product.id}`, { state: { product } });
   };
-  // const handleView = (id) => {
-  //   navigate(`/Productdetails/${id}`);
-  // };
   // filter code likhe toggle ke liye
   const products = {
     newArrivals: [
@@ -284,17 +260,37 @@ const Girls = () => {
     ...products.saleItems,
   ];
 
+  // price range
+
+  const priceRange = [
+    { label: "₹0 - ₹300", min: 0, max: 300 },
+    { label: "₹400 - ₹600", min: 400, max: 600 },
+    { label: "₹700 - ₹1000", min: 700, max: 1000 },
+    { label: "₹1000 ", min: 1000, max: Infinity },
+  ];
+
   // catagory section start
 
   const filteredProducts = allProducts.filter((product) => {
+    const discountedPrice = parseInt(product.span.replace(/[₹,]/g, ""));
+    // ye type ke
     const matchType =
       selectedTypes.length === 0 || selectedTypes.includes(product.type);
 
+    // ye size ke liye hai
     const matchSize =
       selectedSize.length === 0 ||
       (product.size && product.size.some((s) => selectedSize.includes(s)));
 
-    return matchType && matchSize;
+    // ye price ke liye hai
+    const matchPrice =
+      selectedPrices.length === 0 ||
+      selectedPrices.some((label) => {
+        const range = priceRange.find((r) => r.label === label);
+        return discountedPrice >= range.min && discountedPrice <= range.max;
+      });
+
+    return matchType && matchSize && matchPrice;
   });
 
   // culcate a discount price
@@ -309,25 +305,25 @@ const Girls = () => {
         <div className="heading-section">
           <p className="text-head">GIRLS</p>
         </div>
-        <div className="filter-section-women">
-          <div className="left-filter-side-women">
+        <div className="filter-section-girls">
+          <div className="left-filter-side-girls">
             {/* Filtered By Label (Clickable on mobile) */}
-            <p className="left-side-text-women" onClick={handleFilteredByClick}>
+            <p className="left-side-text-girls" onClick={handleFilteredByClick}>
               Filtered By:
             </p>
 
             {filteredVisible && (
               <>
                 {/* Product Type */}
-                <div className="dropdown-women">
+                <div className="dropdown-girls">
                   <p
-                    className="left-side-texts-women"
+                    className="left-side-texts-girls"
                     onClick={() => toggleDropdown("productType")}
                   >
                     Product Type {openDropdown === "productType" ? "▼" : "▲"}
                   </p>
                   {openDropdown === "productType" && (
-                    <div className="dropdown-content-women open">
+                    <div className="dropdown-content-girls open">
                       <label>
                         <input
                           type="checkbox"
@@ -375,15 +371,15 @@ const Girls = () => {
                 </div>
 
                 {/* Size */}
-                <div className="dropdown-women">
+                <div className="dropdown-girls">
                   <p
-                    className="left-side-texts-women"
+                    className="left-side-texts-girls"
                     onClick={() => toggleDropdown("size")}
                   >
                     Size {openDropdown === "size" ? "▼" : "▲"}
                   </p>
                   {openDropdown === "size" && (
-                    <div className="dropdown-content-women open">
+                    <div className="dropdown-content-girls open">
                       <label>
                         <input
                           type="checkbox"
@@ -445,15 +441,15 @@ const Girls = () => {
                 </div>
 
                 {/* Colour */}
-                <div className="dropdown-women">
+                <div className="dropdown-girls">
                   <p
-                    className="left-side-texts-women"
+                    className="left-side-texts-girls"
                     onClick={() => toggleDropdown("color")}
                   >
                     Colour/Variant {openDropdown === "color" ? "▼" : "▲"}
                   </p>
                   {openDropdown === "color" && (
-                    <div className="dropdown-content-women open">
+                    <div className="dropdown-content-girls open">
                       <label>
                         <input type="checkbox" /> Red
                       </label>
@@ -468,27 +464,31 @@ const Girls = () => {
                 </div>
 
                 {/* Price */}
-                <div className="dropdown-women">
+                <div className="dropdown-girls">
                   <p
-                    className="left-side-texts-women"
+                    className="left-side-texts-girls"
                     onClick={() => toggleDropdown("price")}
                   >
                     Price Range {openDropdown === "price" ? "▼" : "▲"}
                   </p>
                   {openDropdown === "price" && (
-                    <div className="dropdown-content-women open">
-                      <label>
-                        <input type="checkbox" /> ₹0 - ₹300
-                      </label>
-                      <label>
-                        <input type="checkbox" /> ₹500 - ₹700
-                      </label>
-                      <label>
-                        <input type="checkbox" /> ₹700 - ₹1000
-                      </label>
-                      <label>
-                        <input type="checkbox" /> ₹1000+
-                      </label>
+                    <div className="dropdown-content-girls open">
+                      {priceRange.map((range) => (
+                        <label key={range.label}>
+                          <input
+                            type="checkbox"
+                            checked={selectedPrices.includes(range.label)}
+                            onChange={() =>
+                              setSelectedPrices((prev) =>
+                                prev.includes(range.label)
+                                  ? prev.filter((p) => p !== range.label)
+                                  : [...prev, range.label]
+                              )
+                            }
+                          />
+                          {range.label} {/* ✅ Add this */}
+                        </label>
+                      ))}
                     </div>
                   )}
                 </div>
@@ -496,8 +496,8 @@ const Girls = () => {
             )}
           </div>
 
-          <div className="right-side-sorted-women">
-            <button className="right-side-sorteds-women">
+          <div className="right-side-sorted-girls">
+            <button className="right-side-sorteds-girls">
               <span>Sorted by</span>
               <p>Popularity</p>
             </button>

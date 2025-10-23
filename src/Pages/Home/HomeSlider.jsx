@@ -497,9 +497,13 @@ const HomeSlider = () => {
 
           {/* background image part alag section end*/}
         </div>
+        {/* custer section start */}
         <div>
-          <h1>Testimonial</h1>
+          <div>
+            <h1> </h1>
+          </div>
         </div>
+        {/* customer section end */}
         {/* product image section  start*/}
       </div>
     </>
