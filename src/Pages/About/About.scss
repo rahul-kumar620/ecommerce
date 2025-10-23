@@ -1,0 +1,29 @@
+.about_main_container {
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  padding-top: 80px;
+  & .about_heading {
+    display: flex;
+    justify-content: center;
+    & .abot_heading_text {
+      font-size: 25px;
+      font-weight: 400;
+      padding: 10px;
+    }
+  }
+  & .about_dividev_part {
+    display: flex;
+    align-items: center;
+    & .sub_tex {
+      width: 50%;
+    }
+    & .main_image_section {
+      width: 70%;
+      & .iamge_section {
+        width: auto;
+        height: 500px;
+      }
+    }
+  }
+}
