@@ -92,7 +92,7 @@ const Womens = () => {
         name: "Elegant Straight Cotton Kurti",
         title: "Women’s Casual Straight Kurti with Side Slits",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750914458/ram-rasiya-vishwamitra-saree-wholesale-catalog-0-2024-01-24_12_13_42_ohyflg.jpg",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1762163509/free-saree-combo-saree-combo-offer-saree-combo-2-saree-combo-set-original-imah9hrhsypzeevh_sfguif.webp",
         span: "1800",
         inStock: true,
         discount: 30,
@@ -102,7 +102,7 @@ const Womens = () => {
         name: "Floral Print A-Line Kurti",
         title: "Rayon A-Line Kurti with Floral Pattern and 3/4 Sleeves",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750914362/rr-vayuputra-1-images-10_trwwcm.jpg",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1762163174/free-7m-anushka-miyani-fab-attached-original-imahdbpyahcaq7tb_zblgxa.webp",
         span: "2000",
         inStock: false,
         discount: 30,
@@ -112,7 +112,7 @@ const Womens = () => {
         name: "Classic Printed Cotton Kurti",
         title: "Ethnic Straight Kurti with Block Print Design",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750914362/rr-vayuputra-1-images-10_trwwcm.jpg",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1762163344/free-1m-anushka-miyani-fab-attached-original-imahd98qfrcxdzv6_pydt05.webp",
         span: "1500",
         inStock: true,
         discount: 20,
@@ -132,7 +132,7 @@ const Womens = () => {
         name: "Block Print Cotton Kurti",
         title: "Women’s Casual Block Print Straight Kurti",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1750914362/rr-vayuputra-1-images-10_trwwcm.jpg",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1762163509/free-saree-combo-saree-combo-offer-saree-combo-2-saree-combo-set-original-imah9hrhsypzeevh_sfguif.webp",
         span: "1500",
         inStock: true,
         discount: 30,

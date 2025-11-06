@@ -74,7 +74,7 @@ const Girls = () => {
         name: "Elegant Straight Cotton Kurti",
         title: "Women’s Casual Straight Kurti with Side Slits",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749865427/pexels-shootsaga-30809730_nrurvm.webp",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1762149669/9d671df7-fa94-4a7d-8aac-74a99b80bfaa_SW103-_lgfqjg.webp",
         span: "1100",
         inStock: true,
         type: "Kurti",
@@ -98,7 +98,7 @@ const Girls = () => {
         name: "Classic Printed Cotton Kurti",
         title: "Ethnic Straight Kurti with Block Print Design",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1762149285/17414133431809381423-Ganpati_Tarana_Vol-1_-_Short_Top_9_cpobx9.jpg",
         span: "800",
         type: "Jeans Top",
         size: ["L"],
@@ -109,7 +109,7 @@ const Girls = () => {
         name: "Elegant Kurti with Embroidery",
         title: "Designer Kurti with Intricate Thread Work",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808440/pexels-mk-1182794846-22431192_xp4umg.webp",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1762162813/suryajyoti-rashi-vol-3-pure-cotton-kurti-2011_1_nderje.webp",
         span: "900",
         type: "Jeans Top",
         size: ["L"],
@@ -120,7 +120,7 @@ const Girls = () => {
         name: "Block Print Cotton Kurti",
         title: "Women’s Casual Block Print Straight Kurti",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808438/pexels-dhanno-20702673_qucy6z.webp",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1762162974/images_2_ktfjf6.jpg",
         span: "1500",
         type: "Jeans Top",
         size: ["L"],
@@ -166,7 +166,7 @@ const Girls = () => {
         name: "Winter Velvet Kurti",
         title: "Women’s Velvet Kurti with Full Sleeves",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808445/pexels-mk-1182794846-22064227_xmiygk.webp",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1762149285/17414133431809381423-Ganpati_Tarana_Vol-1_-_Short_Top_9_cpobx9.jpg",
         span: "1300",
         type: "Jeans Top",
         size: ["L"],
@@ -212,7 +212,7 @@ const Girls = () => {
         name: "Simple Cotton Kurti",
         title: "Basic Cotton Kurti for Everyday Wear",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1762149285/17414133431809381423-Ganpati_Tarana_Vol-1_-_Short_Top_9_cpobx9.jpg",
         span: "300",
         type: "Jeans Top",
         size: ["L"],
@@ -223,7 +223,7 @@ const Girls = () => {
         name: "Water-Resistant Kurti",
         title: "Kurti with Water-Repellent Finish for Outdoor Use",
         image:
-          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1749808432/Ff9ArgIcmQjmu5vDq4LeUe3lT81uUu0DhrvhGg9D_al0lmb.webp",
+          "https://res.cloudinary.com/dqprmy5ro/image/upload/v1762149285/17414133431809381423-Ganpati_Tarana_Vol-1_-_Short_Top_9_cpobx9.jpg",
         span: "3000",
         type: "Jeans Top",
         size: ["XL"],

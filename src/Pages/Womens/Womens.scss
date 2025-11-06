@@ -98,11 +98,13 @@
         & .image-main-women-container {
           padding: 0px;
           position: relative;
+          width: auto;
+          height: 450px;
 
           & .image-section-women {
-            width: 350px;
-            height: auto;
-            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
           }
 
           & .overlay_buttons-women {
@@ -197,6 +199,7 @@
 @media (max-width: 1026px) {
   .main-women-section {
     padding-top: 65px;
+    padding-bottom: 30px;
     & .sub-women-section {
       display: flex;
       flex-direction: column;
@@ -283,7 +286,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 30px;
+        gap: 15px;
         & .all-content-women-section {
           width: 300px;
           background: #fff;
@@ -295,11 +298,13 @@
           & .image-main-women-container {
             padding: 0px;
             position: relative;
+            width: auto;
+            height: 400px;
 
             & .image-section-women {
-              width: 350px;
-              height: auto;
-              object-fit: cover;
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
             }
 
             & .overlay_buttons-women {
